@@ -1,0 +1,137 @@
+/* Final CTA Section */
+.final-cta {
+    background-color: var(--color-matte-black);
+    padding: var(--space-xxl) 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.final-cta::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(163, 230, 53, 0.1) 0%, transparent 70%);
+    z-index: 0;
+}
+
+.final-cta-content {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.overline {
+    display: block;
+    font-family: var(--font-label);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--color-neon-lime);
+    margin-bottom: 1rem;
+}
+
+.final-cta h2 {
+    font-size: clamp(3rem, 8vw, 5rem);
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+.final-cta p {
+    font-size: clamp(1.125rem, 2vw, 1.5rem);
+    color: var(--color-soft-gray);
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.btn-large {
+    padding: 1.25rem 3rem;
+    font-size: 1.125rem;
+}
+
+.trust-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    color: var(--color-soft-gray);
+    font-size: 0.9rem;
+    position: relative;
+}
+
+.trust-badges span {
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.trust-badges span::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-neon-lime);
+    font-weight: bold;
+}
+
+/* Pulse animation for primary button */
+@keyframes pulse-cta {
+    0% {
+        box-shadow: 0 0 0 0 rgba(163, 230, 53, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(163, 230, 53, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(163, 230, 53, 0);
+    }
+}
+
+.btn-primary.btn-large {
+    animation: pulse-cta 2s infinite;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .final-cta {
+        padding: var(--space-xl) 0;
+    }
+
+    .final-cta h2 {
+        font-size: clamp(2.5rem, 6vw, 3.5rem);
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .btn-large {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .trust-badges {
+        gap: 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .trust-badges span {
+        padding-left: 1.25rem;
+    }
+}

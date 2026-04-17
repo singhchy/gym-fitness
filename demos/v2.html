@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APEX GYM | Modern Editorial Redesign</title>
+    <meta name="description" content="Demo V2 - Complete visual and functional overhaul with modern design, responsive layout, and contact form.">
+    <meta name="theme-color" content="#0A0A0A">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Preload critical CSS -->
+    <link rel="preload" href="../css/globals.css" as="style">
+    <link rel="preload" href="../css/layout.css" as="style">
+    <link rel="preload" href="css/v2.css" as="style">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/globals.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/hero.css">
+    <link rel="stylesheet" href="../css/stats.css">
+    <link rel="stylesheet" href="../css/programs.css">
+    <link rel="stylesheet" href="../css/membership.css">
+    <link rel="stylesheet" href="../css/trainers.css">
+    <link rel="stylesheet" href="../css/testimonials.css">
+    <link rel="stylesheet" href="../css/transformation.css">
+    <link rel="stylesheet" href="../css/schedule.css">
+    <link rel="stylesheet" href="../css/faq.css">
+    <link rel="stylesheet" href="../css/gallery.css">
+    <link rel="stylesheet" href="../css/cta.css">
+    <link rel="stylesheet" href="css/v2.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+</head>
+<body data-theme="v2">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo">APEX <span>GYM</span></a>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#programs">Programs</a></li>
+                <li><a href="#trainers">Trainers</a></li>
+                <li><a href="#membership">Membership</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Demos <span class="arrow">▼</span></a>
+                    <div class="dropdown-menu">
+                        <a href="../index.html">Demo V1 <small>Default Dark</small></a>
+                        <a href="v2.html">Demo V2 <small>Minimal Editorial</small></a>
+                        <a href="v3.html">Demo V3 <small>Teal Wellness</small></a>
+                        <a href="v4.html">Demo V4 <small>Magazine Layout</small></a>
+                    </div>
+                </li>
+            </ul>
+            <a href="#membership" class="cta-button">Join Now</a>
+            <button class="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Overlay Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-content">
+            <a href="../index.html" class="logo">APEX <span>GYM</span></a>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#programs">Programs</a></li>
+                <li><a href="#trainers">Trainers</a></li>
+                <li><a href="#membership">Membership</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="../index.html">Demo V1</a></li>
+                <li><a href="v3.html">Demo V3</a></li>
+                <li><a href="v4.html">Demo V4</a></li>
+            </ul>
+            <a href="#membership" class="cta-button">Join Now</a>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero section-padding" data-theme="v2">
+            <div class="container">
+                <div class="hero-content" data-theme="v2">
+                    <span class="hero-badge">NEW YEAR, NEW YOU</span>
+                    <h1 class="hero-title" data-theme="v2">Transform Your Body,<br>Elevate Your Life</h1>
+                    <p>Join the fitness revolution with world-class trainers, cutting-edge equipment, and a community that pushes you to be your best self.</p>
+                    <div class="hero-cta">
+                        <a href="#membership" class="btn btn-primary">Start Your Journey</a>
+                        <a href="#programs" class="btn btn-secondary">Explore Programs</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats section-padding" data-theme="v2">
+            <div class="container">
+                <div class="stats-grid" data-theme="v2">
+                    <div class="stat-card" data-theme="v2">
+                        <div class="stat-number" data-theme="v2" data-count="5000">0</div>
+                        <p>Active Members</p>
+                    </div>
+                    <div class="stat-card" data-theme="v2">
+                        <div class="stat-number" data-theme="v2" data-count="50">0</div>
+                        <p>Expert Trainers</p>
+                    </div>
+                    <div class="stat-card" data-theme="v2">
+                        <div class="stat-number" data-theme="v2" data-count="100">0</div>
+                        <p>Weekly Classes</p>
+                    </div>
+                    <div class="stat-card" data-theme="v2">
+                        <div class="stat-number" data-theme="v2" data-count="15">0</div>
+                        <p>Years Experience</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Programs Section -->
+        <section id="programs" class="programs section-padding">
+            <div class="container">
+                <h2 class="section-title reveal">OUR PROGRAMS</h2>
+                <p class="section-subtitle reveal">Choose from our diverse range of programs designed to help you achieve your fitness goals.</p>
+                <div class="programs-grid grid-4">
+                    <div class="program-card" data-theme="v2">
+                        <img src="../images/programs/program-1.jpg" alt="Strength Training" class="program-image" data-theme="v2" loading="lazy">
+                        <div class="program-content" data-theme="v2">
+                            <h3 class="program-title" data-theme="v2">Strength Training</h3>
+                            <p>Build muscle and increase power with our comprehensive strength programs.</p>
+                            <span class="program-price" data-theme="v2">$99/mo</span>
+                            <a href="#" class="program-cta">Learn More →</a>
+                        </div>
+                    </div>
+                    <div class="program-card" data-theme="v2">
+                        <img src="../images/programs/program-2.jpg" alt="Cardio Blast" class="program-image" data-theme="v2" loading="lazy">
+                        <div class="program-content" data-theme="v2">
+                            <h3 class="program-title" data-theme="v2">Cardio Blast</h3>
+                            <p>High-intensity cardio sessions to burn fat and improve endurance.</p>
+                            <span class="program-price" data-theme="v2">$79/mo</span>
+                            <a href="#" class="program-cta">Learn More →</a>
+                        </div>
+                    </div>
+                    <div class="program-card" data-theme="v2">
+                        <img src="../images/programs/program-3.jpg" alt="Yoga & Flexibility" class="program-image" data-theme="v2" loading="lazy">
+                        <div class="program-content" data-theme="v2">
+                            <h3 class="program-title" data-theme="v2">Yoga & Flexibility</h3>
+                            <p>Improve flexibility, balance, and mindfulness through yoga practices.</p>
+                            <span class="program-price" data-theme="v2">$69/mo</span>
+                            <a href="#" class="program-cta">Learn More →</a>
+                        </div>
+                    </div>
+                    <div class="program-card" data-theme="v2">
+                        <img src="../images/programs/program-4.jpg" alt="HIIT Workouts" class="program-image" data-theme="v2" loading="lazy">
+                        <div class="program-content" data-theme="v2">
+                            <h3 class="program-title" data-theme="v2">HIIT Workouts</h3>
+                            <p>Maximum results in minimum time with high-intensity interval training.</p>
+                            <span class="program-price" data-theme="v2">$89/mo</span>
+                            <a href="#" class="program-cta">Learn More →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trainers Section -->
+        <section id="trainers" class="trainers section-padding">
+            <div class="container">
+                <h2 class="section-title reveal">OUR TEAM</h2>
+                <p class="section-subtitle reveal">Work with certified professionals dedicated to helping you reach your fitness goals.</p>
+                <div class="trainers-grid grid-4">
+                    <div class="trainer-card">
+                        <img src="../images/trainers/trainer-1.jpg" alt="Sarah Johnson" class="trainer-image" loading="lazy">
+                        <div class="trainer-info">
+                            <h3>Sarah Johnson</h3>
+                            <p class="trainer-specialty">Strength & Conditioning</p>
+                            <div class="trainer-social">
+                                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trainer-card">
+                        <img src="../images/trainers/trainer-2.jpg" alt="Mike Chen" class="trainer-image" loading="lazy">
+                        <div class="trainer-info">
+                            <h3>Mike Chen</h3>
+                            <p class="trainer-specialty">HIIT & Cardio</p>
+                            <div class="trainer-social">
+                                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trainer-card">
+                        <img src="../images/trainers/trainer-3.jpg" alt="Emily Davis" class="trainer-image" loading="lazy">
+                        <div class="trainer-info">
+                            <h3>Emily Davis</h3>
+                            <p class="trainer-specialty">Yoga & Pilates</p>
+                            <div class="trainer-social">
+                                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trainer-card">
+                        <img src="../images/trainers/trainer-4.jpg" alt="James Wilson" class="trainer-image" loading="lazy">
+                        <div class="trainer-info">
+                            <h3>James Wilson</h3>
+                            <p class="trainer-specialty">Personal Training</p>
+                            <div class="trainer-social">
+                                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Membership Section -->
+        <section id="membership" class="membership section-padding">
+            <div class="container">
+                <h2 class="section-title reveal">PRICING</h2>
+                <p class="section-subtitle reveal">Choose the perfect plan that fits your fitness journey and budget.</p>
+                <div class="membership-grid grid-3">
+                    <div class="membership-card">
+                        <h3>Basic</h3>
+                        <div class="price">$49<span>/mo</span></div>
+                        <ul class="features">
+                            <li><i class="fas fa-check"></i> Access to gym equipment</li>
+                            <li><i class="fas fa-check"></i> Locker room access</li>
+                            <li><i class="fas fa-check"></i> Free parking</li>
+                            <li><i class="fas fa-times"></i> Group classes</li>
+                            <li><i class="fas fa-times"></i> Personal trainer</li>
+                        </ul>
+                        <a href="#" class="cta-button">Choose Plan</a>
+                    </div>
+                    <div class="membership-card featured">
+                        <div class="badge">Most Popular</div>
+                        <h3>Premium</h3>
+                        <div class="price">$99<span>/mo</span></div>
+                        <ul class="features">
+                            <li><i class="fas fa-check"></i> All Basic features</li>
+                            <li><i class="fas fa-check"></i> Unlimited group classes</li>
+                            <li><i class="fas fa-check"></i> Sauna & steam room</li>
+                            <li><i class="fas fa-check"></i> Nutrition guidance</li>
+                            <li><i class="fas fa-times"></i> Personal trainer</li>
+                        </ul>
+                        <a href="#" class="cta-button primary">Choose Plan</a>
+                    </div>
+                    <div class="membership-card">
+                        <h3>Elite</h3>
+                        <div class="price">$199<span>/mo</span></div>
+                        <ul class="features">
+                            <li><i class="fas fa-check"></i> All Premium features</li>
+                            <li><i class="fas fa-check"></i> 12 personal training sessions</li>
+                            <li><i class="fas fa-check"></i> Priority booking</li>
+                            <li><i class="fas fa-check"></i> Exclusive workshops</li>
+                            <li><i class="fas fa-check"></i> Meal planning</li>
+                        </ul>
+                        <a href="#" class="cta-button">Choose Plan</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="contact-container">
+                    <h2 class="section-title reveal">GET IN TOUCH</h2>
+                    <p class="section-subtitle reveal">Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Full Name *</label>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address *</label>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="form-input" placeholder="+1 (555) 123-4567">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject *</label>
+                            <select id="subject" name="subject" class="form-input" required>
+                                <option value="">Select a subject</option>
+                                <option value="membership">Membership Inquiry</option>
+                                <option value="training">Personal Training</option>
+                                <option value="classes">Group Classes</option>
+                                <option value="general">General Question</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message *</label>
+                            <textarea id="message" name="message" class="form-textarea" placeholder="Tell us how we can help you..." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                        <div class="confirmation-message" id="confirmationMessage">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Thank you for your message! We'll get back to you within 24 hours.</p>
+                        </div>
+                    </form>
+                    <div class="contact-info">
+                        <div class="contact-info-item">
+                            <i class="fas fa-map-marker-alt contact-info-icon"></i>
+                            <h4>Location</h4>
+                            <p>123 Fitness Street<br>Gym City, GC 12345</p>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="fas fa-phone contact-info-icon"></i>
+                            <h4>Phone</h4>
+                            <p>+1 (555) 123-4567<br>+1 (555) 987-6543</p>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="fas fa-envelope contact-info-icon"></i>
+                            <h4>Email</h4>
+                            <p>info@apexgym.com<br>support@apexgym.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content grid-4">
+                <div class="footer-section">
+                    <a href="#" class="logo">APEX<span>GYM</span></a>
+                    <p>Transform your body and elevate your life with our world-class fitness programs and expert trainers.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#programs">Programs</a></li>
+                        <li><a href="#trainers">Trainers</a></li>
+                        <li><a href="#membership">Membership</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Programs</h4>
+                    <ul>
+                        <li><a href="#">Strength Training</a></li>
+                        <li><a href="#">Cardio Blast</a></li>
+                        <li><a href="#">Yoga & Flexibility</a></li>
+                        <li><a href="#">HIIT Workouts</a></li>
+                        <li><a href="#">Personal Training</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Hours</h4>
+                    <ul>
+                        <li>Monday - Friday: 5AM - 11PM</li>
+                        <li>Saturday: 6AM - 10PM</li>
+                        <li>Sunday: 7AM - 9PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 APEX GYM. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/countup.js"></script>
+    <script src="../js/observer.js"></script>
+    <script src="js/v2.js"></script>
+</body>
+</html>

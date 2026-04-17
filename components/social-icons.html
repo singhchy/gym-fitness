@@ -1,0 +1,86 @@
+<!-- Social Media Icons Component -->
+<!-- This component provides scalable vector icons for Instagram, YouTube, Facebook, and TikTok -->
+<!-- Include this file where needed and ensure CSS class "social" is applied to the container -->
+
+<template id="social-icons-template">
+    <style>
+        /* Component-specific styles that complement the existing .social class */
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.05);
+            color: var(--color-white, #fff);
+            transition: all var(--transition-fast, 0.2s);
+        }
+        .social-icon:hover {
+            background-color: var(--color-neon-lime, #00ff00);
+            color: var(--color-matte-black, #121212);
+            transform: translateY(-3px);
+        }
+        .social-icon svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+        /* Dark mode adjustments */
+        @media (prefers-color-scheme: dark) {
+            .social-icon {
+                background-color: rgba(255, 255, 255, 0.1);
+            }
+        }
+        /* Light mode adjustments (if theme supports) */
+        [data-theme="light"] .social-icon {
+            background-color: rgba(0, 0, 0, 0.05);
+            color: var(--color-matte-black, #121212);
+        }
+        [data-theme="light"] .social-icon:hover {
+            background-color: var(--color-neon-lime, #00ff00);
+            color: var(--color-white, #fff);
+        }
+    </style>
+    <div class="social">
+        <a href="#" class="social-icon" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+        </a>
+        <a href="#" class="social-icon" aria-label="YouTube">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+            </svg>
+        </a>
+        <a href="#" class="social-icon" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg>
+        </a>
+        <a href="#" class="social-icon" aria-label="TikTok">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+            </svg>
+        </a>
+    </div>
+</template>
+
+<script>
+    // Optional: If you want to automatically register the component as a custom element
+    // Uncomment the following lines if you want to use <social-icons> tag
+    /*
+    class SocialIcons extends HTMLElement {
+        constructor() {
+            super();
+            const template = document.getElementById('social-icons-template');
+            const content = template.content.cloneNode(true);
+            this.appendChild(content);
+        }
+    }
+    customElements.define('social-icons', SocialIcons);
+    */
+</script>

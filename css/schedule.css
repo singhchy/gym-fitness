@@ -1,0 +1,299 @@
+/* Schedule Section */
+.schedule {
+    background-color: var(--color-graphite);
+    padding: var(--space-xl) 0;
+}
+
+.schedule-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.filter {
+    background-color: transparent;
+    color: var(--color-soft-gray);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-md);
+    font-family: var(--font-label);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.filter:hover {
+    border-color: var(--color-neon-lime);
+    color: var(--color-neon-lime);
+}
+
+.filter.active {
+    background-color: var(--color-neon-lime);
+    color: var(--color-matte-black);
+    border-color: var(--color-neon-lime);
+}
+
+.schedule-table {
+    overflow-x: auto;
+    border-radius: var(--radius-lg);
+    background-color: var(--color-matte-black);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+}
+
+thead {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+th {
+    padding: 1.5rem 1rem;
+    text-align: center;
+    font-family: var(--font-label);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-white);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+td {
+    padding: 1.5rem 1rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: background-color var(--transition-fast);
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover td {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+/* Weekly schedule grid enhancements */
+.time-slot {
+    font-family: var(--font-label);
+    font-weight: 500;
+    color: var(--color-soft-gray);
+    text-align: right;
+    padding-right: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.01);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+tr.even td {
+    background-color: rgba(255, 255, 255, 0.01);
+}
+
+tr.odd td {
+    background-color: transparent;
+}
+
+.schedule-cell {
+    cursor: pointer;
+    position: relative;
+    min-height: 60px;
+    vertical-align: top;
+}
+
+.schedule-cell:hover {
+    background-color: rgba(163, 230, 53, 0.05);
+}
+
+.schedule-cell.selected {
+    background-color: rgba(163, 230, 53, 0.1);
+    outline: 2px solid var(--color-neon-lime);
+    outline-offset: -2px;
+}
+
+.schedule-cell:focus {
+    outline: 2px solid var(--color-neon-lime);
+    outline-offset: -2px;
+}
+
+.class-slot {
+    background-color: rgba(163, 230, 53, 0.1);
+    border-left: 3px solid var(--color-neon-lime);
+    border-radius: var(--radius-sm);
+    padding: 1rem;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.class-slot:hover {
+    background-color: rgba(163, 230, 53, 0.2);
+    transform: translateY(-2px);
+}
+
+.class-slot.teal {
+    background-color: rgba(15, 118, 110, 0.1);
+    border-left-color: var(--color-deep-teal);
+}
+
+.class-slot.teal:hover {
+    background-color: rgba(15, 118, 110, 0.2);
+}
+
+.class-name {
+    font-family: var(--font-label);
+    font-weight: 600;
+    color: var(--color-white);
+    margin-bottom: 0.25rem;
+}
+
+.class-trainer {
+    font-size: 0.875rem;
+    color: var(--color-soft-gray);
+    margin-bottom: 0.25rem;
+}
+
+.class-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: var(--color-soft-gray);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.difficulty {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.difficulty-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.difficulty-dot.easy {
+    background-color: var(--color-aqua-mist);
+}
+
+.difficulty-dot.medium {
+    background-color: var(--color-neon-lime);
+}
+
+.difficulty-dot.hard {
+    background-color: #ff4757;
+}
+
+.today-column {
+    background-color: rgba(255, 255, 255, 0.02);
+    position: relative;
+}
+
+.today-column::after {
+    content: 'TODAY';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--font-label);
+    font-size: 0.7rem;
+    color: var(--color-neon-lime);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* Mobile Day Tabs */
+.day-tabs {
+    display: none;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.day-tab {
+    background-color: transparent;
+    color: var(--color-soft-gray);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-md);
+    font-family: var(--font-label);
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.day-tab.active {
+    background-color: var(--color-neon-lime);
+    color: var(--color-matte-black);
+    border-color: var(--color-neon-lime);
+}
+
+.mobile-day-view {
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    th, td {
+        padding: 1rem 0.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .schedule-table {
+        display: block; /* keep table visible */
+    }
+
+    table {
+        min-width: 600px; /* reduced min-width for smaller screens */
+    }
+
+    th, td {
+        padding: 0.75rem 0.5rem;
+        font-size: 0.875rem;
+    }
+
+    .time-slot {
+        padding-right: 1rem;
+        font-size: 0.8125rem;
+    }
+
+    .day-tabs {
+        display: none; /* hide day tabs */
+    }
+
+    .mobile-day-view {
+        display: none; /* hide mobile day view */
+    }
+
+    /* Keep mobile-day styles in case they are used elsewhere */
+    .mobile-day {
+        background-color: var(--color-matte-black);
+        border-radius: var(--radius-lg);
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .mobile-day h4 {
+        font-family: var(--font-label);
+        font-size: 1.25rem;
+        color: var(--color-white);
+        margin-bottom: 1rem;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .mobile-classes {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+}

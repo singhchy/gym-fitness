@@ -1,0 +1,201 @@
+/* Gallery Section */
+.gallery {
+    background-color: var(--color-graphite);
+    padding: var(--space-xl) 0;
+}
+
+.masonry {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-rows: 200px;
+    grid-gap: 1.5rem;
+    grid-auto-flow: dense;
+}
+
+.masonry-item {
+    position: relative;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.masonry-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.masonry-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.8);
+    transition: filter var(--transition-base), transform var(--transition-slow);
+}
+
+.masonry-item:hover img {
+    filter: brightness(1);
+    transform: scale(1.05);
+}
+
+.masonry-item-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem;
+    background: linear-gradient(to top, rgba(18, 18, 18, 0.9), transparent);
+    color: var(--color-white);
+    transform: translateY(20px);
+    opacity: 0;
+    transition: transform var(--transition-base), opacity var(--transition-base);
+}
+
+.masonry-item:hover .masonry-item-overlay {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.masonry-item-title {
+    font-family: var(--font-label);
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+}
+
+.masonry-item-desc {
+    font-size: 0.875rem;
+    color: var(--color-soft-gray);
+}
+
+/* Sizing variants */
+.masonry-item.wide {
+    grid-column: span 2;
+}
+
+.masonry-item.tall {
+    grid-row: span 2;
+}
+
+.masonry-item.large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+/* Lightbox */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(18, 18, 18, 0.95);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--transition-base), visibility var(--transition-base);
+}
+
+.lightbox.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    object-fit: contain;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+}
+
+.close-lightbox {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background: none;
+    border: none;
+    color: var(--color-white);
+    font-size: 3rem;
+    cursor: pointer;
+    transition: color var(--transition-fast);
+    z-index: 2001;
+}
+
+.close-lightbox:hover {
+    color: var(--color-neon-lime);
+}
+
+.prev-lightbox,
+.next-lightbox {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-white);
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    font-size: 1.5rem;
+    z-index: 2001;
+}
+
+.prev-lightbox:hover,
+.next-lightbox:hover {
+    background-color: var(--color-neon-lime);
+    color: var(--color-matte-black);
+}
+
+.prev-lightbox {
+    left: 2rem;
+}
+
+.next-lightbox {
+    right: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .masonry {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-auto-rows: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    .masonry {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        grid-auto-rows: 150px;
+        grid-gap: 1rem;
+    }
+
+    .masonry-item.wide,
+    .masonry-item.tall,
+    .masonry-item.large {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .prev-lightbox,
+    .next-lightbox {
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+    }
+
+    .close-lightbox {
+        top: 1rem;
+        right: 1rem;
+        font-size: 2.5rem;
+    }
+}

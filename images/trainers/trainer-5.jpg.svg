@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="350" height="450" viewBox="0 0 350 450">
+  <rect width="350" height="450" fill="#2a2a2a"/>
+  <circle cx="175" cy="175" r="120" fill="#3a3a3a"/>
+  <text x="175" y="175" font-family="Arial, sans-serif" font-size="32" fill="#fff" text-anchor="middle" dy="5">TRAINER $i</text>
+  <text x="175" y="350" font-family="Arial, sans-serif" font-size="18" fill="#ccc" text-anchor="middle">350x450</text>
+</svg>
