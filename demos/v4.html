@@ -7,7 +7,8 @@
     <meta name="description" content="Demo V4 - Magazine / Asymmetric Grid design for APEX GYM.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@400;500;600;700&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../demos/v4/css/v4.css">
     <link rel="stylesheet" href="../css/globals.css">
     <link rel="stylesheet" href="../css/animations.css">
     <link rel="stylesheet" href="../css/layout.css">
@@ -25,6 +26,7 @@
     <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 </head>
 <body data-theme="v4">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <nav class="navbar">
         <div class="container">
             <a href="../index.html" class="logo">APEX <span>GYM</span></a>
@@ -72,10 +74,12 @@
         </div>
     </div>
 
-    <main>
+    <main id="main-content">
         <section id="home" class="hero hero-v4">
             <div class="hero-background">
-                <img src="https://images.unsplash.com/photo-1571013464-5c0e7847c4cf?auto=format&fit=crop&w=1920&h=1080" alt="Magazine cover" loading="lazy">
+                <video autoplay muted loop playsinline poster="video/hero-poster.jpg">
+                    <source src="../demos/v4/video/hero-bg-motivation.mp4" type="video/mp4">
+                </video>
             </div>
             <div class="container">
                 <div class="hero-content reveal">
@@ -113,7 +117,34 @@
             <div class="container">
                 <h2 class="section-title reveal">PROGRAMS IN GRID</h2>
                 <div class="programs-grid asymmetric">
-                    <!-- Cards -->
+                    <div class="program-card reveal">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&h=600" alt="Strength Training" loading="lazy">
+                        <div class="program-card-content">
+                            <h3 class="program-card-title">STRENGTH TRAINING</h3>
+                            <p class="program-card-description">Build muscle, increase power, transform your physique.</p>
+                        </div>
+                    </div>
+                    <div class="program-card reveal">
+                        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&h=600" alt="HIIT Workouts" loading="lazy">
+                        <div class="program-card-content">
+                            <h3 class="program-card-title">HIIT WORKOUTS</h3>
+                            <p class="program-card-description">High-intensity intervals for maximum calorie burn.</p>
+                        </div>
+                    </div>
+                    <div class="program-card reveal">
+                        <img src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?auto=format&fit=crop&w=800&h=600" alt="Yoga & Flexibility" loading="lazy">
+                        <div class="program-card-content">
+                            <h3 class="program-card-title">YOGA & FLEXIBILITY</h3>
+                            <p class="program-card-description">Enhance mobility, reduce stress, find balance.</p>
+                        </div>
+                    </div>
+                    <div class="program-card reveal">
+                        <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=800&h=600" alt="Personal Training" loading="lazy">
+                        <div class="program-card-content">
+                            <h3 class="program-card-title">PERSONAL TRAINING</h3>
+                            <p class="program-card-description">One-on-one coaching for personalized results.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -136,7 +167,464 @@
             <div class="container">
                 <h2 class="section-title reveal">MEMBERSHIP</h2>
                 <div class="pricing-grid asymmetric">
-                    <!-- Cards -->
+                    <div class="pricing-card reveal">
+                        <h3 class="pricing-card-title">BASIC</h3>
+                        <div class="pricing-card-price">$49<span>/month</span></div>
+                        <ul class="pricing-card-features">
+                            <li>Access to gym equipment</li>
+                            <li>Locker room access</li>
+                            <li>Free parking</li>
+                            <li>Basic fitness assessment</li>
+                        </ul>
+                        <a href="#" class="pricing-card-cta">Join Now</a>
+                    </div>
+                    <div class="pricing-card featured reveal">
+                        <h3 class="pricing-card-title">PREMIUM</h3>
+                        <div class="pricing-card-price">$99<span>/month</span></div>
+                        <ul class="pricing-card-features">
+                            <li>All Basic features</li>
+                            <li>Group fitness classes</li>
+                            <li>Sauna & steam room</li>
+                            <li>Personal training session</li>
+                            <li>Nutrition consultation</li>
+                        </ul>
+                        <a href="#" class="pricing-card-cta">Join Now</a>
+                    </div>
+                    <div class="pricing-card reveal">
+                        <h3 class="pricing-card-title">ELITE</h3>
+                        <div class="pricing-card-price">$149<span>/month</span></div>
+                        <ul class="pricing-card-features">
+                            <li>All Premium features</li>
+                            <li>Unlimited personal training</li>
+                            <li>Priority class booking</li>
+                            <li>Exclusive amenities</li>
+                            <li>Monthly body composition</li>
+                        </ul>
+                        <a href="#" class="pricing-card-cta">Join Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="trainers" class="trainers">
+            <div class="container">
+                <h2 class="section-title reveal">OUR TRAINERS</h2>
+                <div class="trainers-grid asymmetric">
+                    <div class="trainer-card reveal">
+                        <img src="../demos/v4/images/v4/trainers/trainer-1.jpg" alt="Alex Johnson" loading="lazy">
+                        <div class="trainer-card-content">
+                            <h3 class="trainer-card-name">ALEX JOHNSON</h3>
+                            <p class="trainer-card-role">Strength Coach</p>
+                            <p class="trainer-card-bio">10+ years experience in powerlifting and bodybuilding.</p>
+                        </div>
+                    </div>
+                    <div class="trainer-card reveal">
+                        <img src="../demos/v4/images/v4/trainers/trainer-2.jpg" alt="Sarah Miller" loading="lazy">
+                        <div class="trainer-card-content">
+                            <h3 class="trainer-card-name">SARAH MILLER</h3>
+                            <p class="trainer-card-role">HIIT Specialist</p>
+                            <p class="trainer-card-bio">Certified HIIT instructor with passion for results.</p>
+                        </div>
+                    </div>
+                    <div class="trainer-card reveal">
+                        <img src="../demos/v4/images/v4/trainers/trainer-3.jpg" alt="Mike Chen" loading="lazy">
+                        <div class="trainer-card-content">
+                            <h3 class="trainer-card-name">MIKE CHEN</h3>
+                            <p class="trainer-card-role">Yoga Instructor</p>
+                            <p class="trainer-card-bio">200-hour RYT certified yoga and meditation teacher.</p>
+                        </div>
+                    </div>
+                    <div class="trainer-card reveal">
+                        <img src="../demos/v4/images/v4/trainers/trainer-4.jpg" alt="Emma Davis" loading="lazy">
+                        <div class="trainer-card-content">
+                            <h3 class="trainer-card-name">EMMA DAVIS</h3>
+                            <p class="trainer-card-role">Nutrition Expert</p>
+                            <p class="trainer-card-bio">Sports nutritionist helping athletes fuel right.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="section-title reveal">MEMBER STORIES</h2>
+                <div class="testimonials-grid asymmetric">
+                    <div class="testimonial-card reveal">
+                        <div class="testimonial-content">
+                            <p>"APEX GYM transformed my life. The trainers are incredible and the community is so supportive."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <span class="testimonial-name">JAMES WILSON</span>
+                            <span class="testimonial-role">Lost 30 lbs</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card reveal">
+                        <div class="testimonial-content">
+                            <p>"Best gym I've ever joined. The equipment is top-notch and the classes are always fun."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <span class="testimonial-name">LISA CHEN</span>
+                            <span class="testimonial-role">Gained 15 lbs muscle</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card reveal">
+                        <div class="testimonial-content">
+                            <p>"The personal training program here is unmatched. I've achieved goals I never thought possible."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <span class="testimonial-name">MARCUS JOHNSON</span>
+                            <span class="testimonial-role">Completed first marathon</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="transformations">
+            <div class="container">
+                <h2 class="section-title reveal">TRANSFORMATIONS</h2>
+                <div class="transformations-grid asymmetric">
+                    <div class="transformation-card reveal">
+                        <div class="before-after-container">
+                            <div class="before-image">
+                                <img src="../images/transformations/before.jpg" alt="Before" loading="lazy">
+                                <span class="label">BEFORE</span>
+                            </div>
+                            <div class="after-image">
+                                <img src="../images/transformations/after.jpg" alt="After" loading="lazy">
+                                <span class="label">AFTER</span>
+                            </div>
+                        </div>
+                        <div class="transformation-info">
+                            <h3>SARAH'S JOURNEY</h3>
+                            <p>Lost 40 lbs in 6 months with our personalized program.</p>
+                        </div>
+                    </div>
+                    <div class="transformation-card reveal">
+                        <div class="before-after-container">
+                            <div class="before-image">
+                                <img src="../images/transformations/before.jpg" alt="Before" loading="lazy">
+                                <span class="label">BEFORE</span>
+                            </div>
+                            <div class="after-image">
+                                <img src="../images/transformations/after.jpg" alt="After" loading="lazy">
+                                <span class="label">AFTER</span>
+                            </div>
+                        </div>
+                        <div class="transformation-info">
+                            <h3>JOHN'S JOURNEY</h3>
+                            <p>Gained 25 lbs of muscle in 8 months of dedicated training.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="schedule">
+            <div class="container">
+                <h2 class="section-title reveal">CLASS SCHEDULE</h2>
+                <div class="schedule-container asymmetric">
+                    <div class="schedule-tabs reveal">
+                        <button class="schedule-tab active" data-day="monday">MONDAY</button>
+                        <button class="schedule-tab" data-day="tuesday">TUESDAY</button>
+                        <button class="schedule-tab" data-day="wednesday">WEDNESDAY</button>
+                        <button class="schedule-tab" data-day="thursday">THURSDAY</button>
+                        <button class="schedule-tab" data-day="friday">FRIDAY</button>
+                        <button class="schedule-tab" data-day="saturday">SATURDAY</button>
+                        <button class="schedule-tab" data-day="sunday">SUNDAY</button>
+                    </div>
+                    <div class="schedule-content reveal">
+                        <div class="schedule-day active" data-day="monday">
+                            <div class="schedule-item">
+                                <span class="schedule-time">6:00 AM</span>
+                                <span class="schedule-class">HIIT Blast</span>
+                                <span class="schedule-trainer">Sarah</span>
+                            </div>
+                            <div class="schedule-item">
+                                <span class="schedule-time">8:00 AM</span>
+                                <span class="schedule-class">Yoga Flow</span>
+                                <span class="schedule-trainer">Mike</span>
+                            </div>
+                            <div class="schedule-item">
+                                <span class="schedule-time">10:00 AM</span>
+                                <span class="schedule-class">Strength Training</span>
+                                <span class="schedule-trainer">Alex</span>
+                            </div>
+                            <div class="schedule-item">
+                                <span class="schedule-time">5:00 PM</span>
+                                <span class="schedule-class">Spin Class</span>
+                                <span class="schedule-trainer">Sarah</span>
+                            </div>
+                            <div class="schedule-item">
+                                <span class="schedule-time">7:00 PM</span>
+                                <span class="schedule-class">Boot Camp</span>
+                                <span class="schedule-trainer">Alex</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq">
+            <div class="container">
+                <h2 class="section-title reveal">FREQUENTLY ASKED</h2>
+                <div class="faq-container asymmetric">
+                    <div class="faq-item reveal">
+                        <button class="faq-question">
+                            <span>What are your gym hours?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We're open 24/7 for all members. Access your workout anytime that fits your schedule.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item reveal">
+                        <button class="faq-question">
+                            <span>Do you offer personal training?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes! We have certified personal trainers available for one-on-one sessions. Premium and Elite memberships include personal training sessions.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item reveal">
+                        <button class="faq-question">
+                            <span>Can I freeze my membership?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes, you can freeze your membership for up to 3 months per year. Contact our front desk for more details.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item reveal">
+                        <button class="faq-question">
+                            <span>What equipment do you have?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We have a full range of cardio equipment, free weights, machines, functional training areas, and dedicated spaces for classes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="gallery">
+            <div class="container">
+                <h2 class="section-title reveal">GALLERY</h2>
+                <div class="gallery-grid asymmetric">
+                    <div class="gallery-item reveal">
+                        <img src="../demos/v4/images/v4/gallery/gallery-1.jpg" alt="Gym Interior" loading="lazy">
+                        <div class="gallery-overlay">
+                            <span>Gym Interior</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item reveal">
+                        <img src="../demos/v4/images/v4/gallery/gallery-2.jpg" alt="Training Area" loading="lazy">
+                        <div class="gallery-overlay">
+                            <span>Training Area</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item reveal">
+                        <img src="../demos/v4/images/v4/gallery/gallery-3.jpg" alt="Equipment" loading="lazy">
+                        <div class="gallery-overlay">
+                            <span>Equipment</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item reveal">
+                        <img src="../demos/v4/images/v4/gallery/gallery-4.jpg" alt="Group Class" loading="lazy">
+                        <div class="gallery-overlay">
+                            <span>Group Class</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item reveal">
+                        <img src="../demos/v4/images/v4/gallery/gallery-5.jpg" alt="Cardio Zone" loading="lazy">
+                        <div class="gallery-overlay">
+                            <span>Cardio Zone</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item reveal">
+                        <img src="../demos/v4/images/v4/gallery/gallery-6.jpg" alt="Weights Area" loading="lazy">
+                        <div class="gallery-overlay">
+                            <span>Weights Area</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="blog">
+            <div class="container">
+                <h2 class="section-title reveal">LATEST ARTICLES</h2>
+                <div class="blog-grid asymmetric">
+                    <article class="blog-card reveal">
+                        <img src="../demos/v4/images/v4/blog/blog-1.jpg" alt="Featured Article" loading="lazy">
+                        <div class="blog-card-content">
+                            <span class="blog-category">FEATURED</span>
+                            <h3 class="blog-card-title">THE FUTURE OF FITNESS</h3>
+                            <p class="blog-card-excerpt">Exploring emerging trends in the fitness industry and what they mean for your training.</p>
+                            <a href="#" class="blog-card-link">Read More →</a>
+                        </div>
+                    </article>
+                    <article class="blog-card reveal">
+                        <img src="../demos/v4/images/v4/blog/blog-2.jpg" alt="Training Tips" loading="lazy">
+                        <div class="blog-card-content">
+                            <span class="blog-category">TRAINING</span>
+                            <h3 class="blog-card-title">5 MISTAKES TO AVOID</h3>
+                            <p class="blog-card-excerpt">Common training errors that could be holding back your progress.</p>
+                            <a href="#" class="blog-card-link">Read More →</a>
+                        </div>
+                    </article>
+                    <article class="blog-card reveal">
+                        <img src="../demos/v4/images/v4/blog/blog-3.jpg" alt="Nutrition Guide" loading="lazy">
+                        <div class="blog-card-content">
+                            <span class="blog-category">NUTRITION</span>
+                            <h3 class="blog-card-title">FUEL YOUR WORKOUTS</h3>
+                            <p class="blog-card-excerpt">Essential nutrition tips for maximizing your training results.</p>
+                            <a href="#" class="blog-card-link">Read More →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-editorial">
+            <div class="about-editorial-container">
+                <!-- Layer 1: Top Full-Width Headline Block -->
+                <div class="about-editorial-headline">
+                    <div class="about-editorial-label">
+                        <span class="about-editorial-badge">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M6.5 6.5h11"></path>
+                                <path d="M6 20v-2a6 6 0 1 1 12 0v2"></path>
+                                <path d="M6 4v4"></path>
+                                <path d="M18 4v4"></path>
+                            </svg>
+                        </span>
+                        <span class="about-editorial-label-text">ABOUT US</span>
+                    </div>
+                    <h2 class="about-editorial-title">
+                        <span class="about-editorial-title-line">WE BELIEVE FITNESS ISN'T JUST ABOUT LIFTING WEIGHTS</span>
+                        <span class="about-editorial-title-line">IT'S ABOUT BUILDING</span>
+                    </h2>
+                </div>
+
+                <!-- Layer 2: Bottom Three-Column Content Row -->
+                <div class="about-editorial-content">
+                    <!-- Left Column: Portrait Photo -->
+                    <div class="about-editorial-left">
+                        <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?auto=format&fit=crop&w=520&h=680" alt="Female Athlete" class="about-editorial-image-left" loading="lazy">
+                    </div>
+
+                    <!-- Center Column: Content -->
+                    <div class="about-editorial-center">
+                        <!-- Stat Block -->
+                        <div class="about-editorial-stat">
+                            <span class="about-editorial-stat-number">15+</span>
+                            <span class="about-editorial-stat-label">PROFESSIONAL<br>EXPERIENCE</span>
+                        </div>
+
+                        <!-- Horizontal Rule -->
+                        <hr class="about-editorial-divider">
+
+                        <!-- Body Paragraphs -->
+                        <div class="about-editorial-text">
+                            <p>We combine advanced training techniques with a holistic approach to fitness. Our methodology focuses on building sustainable habits that transform not just your body, but your entire lifestyle.</p>
+                            <p>Every workout is designed to challenge you while ensuring proper form and progressive overload. We believe in training mindsets as much as muscles.</p>
+                        </div>
+
+                        <!-- CTA Row -->
+                        <div class="about-editorial-cta">
+                            <a href="#about" class="about-editorial-button">
+                                <span>ABOUT US</span>
+                                <span class="about-editorial-button-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                    </svg>
+                                </span>
+                            </a>
+                            <div class="about-editorial-social-proof">
+                                <div class="about-editorial-avatars">
+                                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&h=100" alt="Member" class="about-editorial-avatar" loading="lazy">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100" alt="Member" class="about-editorial-avatar" loading="lazy">
+                                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&h=100" alt="Member" class="about-editorial-avatar" loading="lazy">
+                                </div>
+                                <div class="about-editorial-rating">
+                                    <div class="about-editorial-stars">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#FFD700" stroke="none">
+                                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#FFD700" stroke="none">
+                                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#FFD700" stroke="none">
+                                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#FFD700" stroke="none">
+                                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#FFD700" stroke="none">
+                                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                        </svg>
+                                    </div>
+                                    <span class="about-editorial-review-count">2.5k+ reviews</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Portrait Photo -->
+                    <div class="about-editorial-right">
+                        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=760&h=960" alt="Female Athlete" class="about-editorial-image-right" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title reveal">GET IN TOUCH</h2>
+                <div class="contact-grid asymmetric">
+                    <div class="contact-info reveal">
+                        <div class="contact-item">
+                            <h3>LOCATION</h3>
+                            <p>123 Fitness Street<br>Gym City, GC 12345</p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>HOURS</h3>
+                            <p>Monday - Friday: 5:00 AM - 11:00 PM<br>Saturday - Sunday: 6:00 AM - 10:00 PM</p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>CONTACT</h3>
+                            <p>Phone: (555) 123-4567<br>Email: info@apexgym.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-form reveal">
+                        <form>
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
@@ -199,6 +687,9 @@
         </div>
     </footer>
 
+    <script src="../demos/v4/js/v4.js" defer></script>
+    <script src="../demos/v4/js/v4-ticker.js" defer></script>
+    <script src="../demos/v4/js/v4-video.js" defer></script>
     <script src="../js/accordion.js" defer></script>
     <script src="../js/main.js" defer></script>
     <script src="../js/navbar.js" defer></script>

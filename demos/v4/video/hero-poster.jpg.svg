@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <rect width="1920" height="1080" fill="#1C1C1E"/>
+  <rect x="0" y="0" width="1920" height="1080" fill="url(#heroGradient)" opacity="0.4"/>
+  <text x="960" y="480" font-family="Bebas Neue, sans-serif" font-size="72" fill="#FF3B30" text-anchor="middle">APEX GYM</text>
+  <text x="960" y="560" font-family="DM Sans, sans-serif" font-size="32" fill="#FFFFFF" text-anchor="middle">Hero Video Background</text>
+  <text x="960" y="610" font-family="DM Sans, sans-serif" font-size="20" fill="#8E8E93" text-anchor="middle">1920 × 1080</text>
+  <circle cx="960" cy="720" r="60" fill="none" stroke="#FF3B30" stroke-width="4"/>
+  <polygon points="940,700 940,740 980,720" fill="#FF3B30"/>
+  <defs>
+    <linearGradient id="heroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF3B30;stop-opacity:0.6"/>
+      <stop offset="50%" style="stop-color:#FFD60A;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:0.6"/>
+    </linearGradient>
+  </defs>
+</svg>
