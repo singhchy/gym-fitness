@@ -14,7 +14,7 @@
     <!-- Preload critical CSS -->
     <link rel="preload" href="../css/globals.css" as="style">
     <link rel="preload" href="../css/layout.css" as="style">
-    <link rel="preload" href="css/v2.css" as="style">
+    <link rel="preload" href="../demos/v2/css/v2.css" as="style">
     <!-- CSS -->
     <link rel="stylesheet" href="../css/globals.css">
     <link rel="stylesheet" href="../css/animations.css">
@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="../css/faq.css">
     <link rel="stylesheet" href="../css/gallery.css">
     <link rel="stylesheet" href="../css/cta.css">
-    <link rel="stylesheet" href="css/v2.css">
+    <link rel="stylesheet" href="../demos/v2/css/v2.css">
     <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 </head>
 <body data-theme="v2">
@@ -84,6 +84,12 @@
     <main>
         <!-- Hero Section -->
         <section id="home" class="hero section-padding" data-theme="v2">
+            <div class="hero-background" data-theme="v2">
+                <video autoplay muted loop playsinline>
+                    <source src="../demos/v2/assets/workout.mp4" type="video/mp4">
+                </video>
+                <div class="video-overlay"></div>
+            </div>
             <div class="container">
                 <div class="hero-content" data-theme="v2">
                     <span class="hero-badge">NEW YEAR, NEW YOU</span>
@@ -373,7 +379,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 APEX GYM. All rights reserved.</p>
+                <p>&copy; 2026 APEX GYM. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -383,6 +389,6 @@
     <script src="../js/navbar.js"></script>
     <script src="../js/countup.js"></script>
     <script src="../js/observer.js"></script>
-    <script src="js/v2.js"></script>
+    <script src="../demos/v2/js/v2.js"></script>
 </body>
 </html>
