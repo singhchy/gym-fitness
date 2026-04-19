@@ -4,10 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>APEX GYM | Teal Wellness</title>
-    <meta name="description" content="Demo V3 - Teal Wellness focus for APEX GYM.">
+    <meta name="description" content="Experience holistic wellness at APEX GYM. Restore your body, renew your mind with our spa-grade recovery facilities and wellness programs.">
+    <meta name="theme-color" content="#0D9488">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Preload critical CSS -->
+    <link rel="preload" href="../css/globals.css" as="style">
+    <link rel="preload" href="../css/layout.css" as="style">
+    <link rel="preload" href="../demos/v3/css/v3.css" as="style">
+    <!-- CSS -->
     <link rel="stylesheet" href="../css/globals.css">
     <link rel="stylesheet" href="../css/animations.css">
     <link rel="stylesheet" href="../css/layout.css">
@@ -22,14 +28,16 @@
     <link rel="stylesheet" href="../css/faq.css">
     <link rel="stylesheet" href="../css/gallery.css">
     <link rel="stylesheet" href="../css/cta.css">
+    <link rel="stylesheet" href="../demos/v3/css/v3.css">
     <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 </head>
 <body data-theme="v3">
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <a href="../index.html" class="logo">APEX <span>GYM</span></a>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
+                <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#programs">Programs</a></li>
                 <li><a href="#trainers">Trainers</a></li>
                 <li><a href="#membership">Membership</a></li>
@@ -54,6 +62,7 @@
         </div>
     </nav>
 
+    <!-- Mobile Overlay Menu -->
     <div class="mobile-menu">
         <div class="mobile-menu-content">
             <a href="../index.html" class="logo">APEX <span>GYM</span></a>
@@ -64,8 +73,8 @@
                 <li><a href="#membership">Membership</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="../index.html">Demo V1</a></li>
                 <li><a href="v2.html">Demo V2</a></li>
-                <li><a href="v3.html">Demo V3</a></li>
                 <li><a href="v4.html">Demo V4</a></li>
             </ul>
             <a href="#membership" class="cta-button">Join Now</a>
@@ -73,99 +82,336 @@
     </div>
 
     <main>
+        <!-- Hero Section -->
         <section id="home" class="hero hero-v3">
-            <div class="hero-background">
-                <div class="teal-gradient"></div>
-                <img src="https://images.unsplash.com/photo-1571013462-5c0e7847c4cd?auto=format&fit=crop&w=1920&h=1080" alt="Wellness spa" loading="lazy">
-            </div>
             <div class="container">
                 <div class="hero-content reveal">
                     <span class="badge">WELLNESS & RECOVERY</span>
-                    <h1 class="hero-title">RESTORE YOUR BODY. RENEW YOUR MIND.</h1>
-                    <p class="hero-subtitle">Holistic fitness with spa‑grade recovery facilities.</p>
+                    <h1 class="hero-title">Restore Your Body.<br>Renew Your Mind.</h1>
+                    <p class="hero-subtitle">Experience holistic fitness with spa-grade recovery facilities, mindfulness programs, and expert wellness coaching.</p>
                     <div class="hero-cta">
                         <a href="#membership" class="btn btn-primary">Explore Wellness</a>
-                        <a href="#" class="btn btn-secondary">Book a Spa Tour</a>
+                        <a href="#programs" class="btn btn-secondary">View Programs</a>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Stats Section -->
         <section class="stats">
             <div class="container">
                 <div class="stats-grid">
-                    <div class="stat">
-                        <span class="stat-number" data-count="2400">0</span>
-                        <span class="stat-label">Members</span>
+                    <div class="stat reveal">
+                        <span class="stat-number" data-count="3200">0</span>
+                        <span class="stat-label">Wellness Members</span>
                     </div>
-                    <div class="stat">
-                        <span class="stat-number" data-count="15">0</span>
-                        <span class="stat-label">Expert Trainers</span>
+                    <div class="stat reveal">
+                        <span class="stat-number" data-count="25">0</span>
+                        <span class="stat-label">Wellness Experts</span>
                     </div>
-                    <div class="stat">
-                        <span class="stat-number" data-count="98">0</span>
+                    <div class="stat reveal">
+                        <span class="stat-number" data-count="99">0</span>
                         <span class="stat-label">Satisfaction Rate</span>
                     </div>
-                    <div class="stat">
-                        <span class="stat-number" data-count="8">0</span>
-                        <span class="stat-label">Years In Business</span>
+                    <div class="stat reveal">
+                        <span class="stat-number" data-count="12">0</span>
+                        <span class="stat-label">Years Experience</span>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Programs Section -->
         <section id="programs" class="programs">
             <div class="container">
-                <h2 class="section-title reveal">WELLNESS PROGRAMS</h2>
-                <p class="section-subtitle reveal">Balance strength with recovery.</p>
+                <h2 class="section-title reveal">Wellness Programs</h2>
+                <p class="section-subtitle reveal">Balance strength with recovery through our comprehensive wellness offerings.</p>
                 <div class="programs-track">
-                    <!-- Cards -->
+                    <article class="program-card reveal">
+                        <div class="program-image-container">
+                            <img src="../images/programs/program-4.jpg" alt="Yoga & Mobility" class="program-image" loading="lazy">
+                            <span class="program-badge">MINDFULNESS</span>
+                        </div>
+                        <div class="program-content">
+                            <h3 class="program-title">Yoga & Mobility</h3>
+                            <p class="program-description">Enhance flexibility, reduce stress, and improve mind-body connection through guided yoga sessions.</p>
+                            <div class="program-meta">
+                                <span>60 min</span>
+                                <span class="difficulty">All Levels</span>
+                            </div>
+                            <a href="#" class="program-cta">Learn More →</a>
+                        </div>
+                    </article>
+                    <article class="program-card reveal">
+                        <div class="program-image-container">
+                            <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=600&h=400&q=80" alt="Recovery Zone" class="program-image" loading="lazy">
+                            <span class="program-badge">RECOVERY</span>
+                        </div>
+                        <div class="program-content">
+                            <h3 class="program-title">Recovery Zone</h3>
+                            <p class="program-description">Access cryotherapy, sauna, massage therapy, and compression recovery for optimal muscle restoration.</p>
+                            <div class="program-meta">
+                                <span>45 min</span>
+                                <span class="difficulty">Relaxing</span>
+                            </div>
+                            <a href="#" class="program-cta">Learn More →</a>
+                        </div>
+                    </article>
+                    <article class="program-card reveal">
+                        <div class="program-image-container">
+                            <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=600&h=400&q=80" alt="Nutrition Coaching" class="program-image" loading="lazy">
+                            <span class="program-badge">NUTRITION</span>
+                        </div>
+                        <div class="program-content">
+                            <h3 class="program-title">Nutrition Coaching</h3>
+                            <p class="program-description">Personalized meal plans and nutritional guidance from certified dietitians for optimal wellness.</p>
+                            <div class="program-meta">
+                                <span>30 min</span>
+                                <span class="difficulty">Personalized</span>
+                            </div>
+                            <a href="#" class="program-cta">Learn More →</a>
+                        </div>
+                    </article>
+                    <article class="program-card reveal">
+                        <div class="program-image-container">
+                            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=600&h=400&q=80" alt="Meditation Classes" class="program-image" loading="lazy">
+                            <span class="program-badge">MEDITATION</span>
+                        </div>
+                        <div class="program-content">
+                            <h3 class="program-title">Meditation Classes</h3>
+                            <p class="program-description">Guided meditation sessions to reduce anxiety, improve focus, and promote mental clarity.</p>
+                            <div class="program-meta">
+                                <span>30 min</span>
+                                <span class="difficulty">All Levels</span>
+                            </div>
+                            <a href="#" class="program-cta">Learn More →</a>
+                        </div>
+                    </article>
+                    <article class="program-card reveal">
+                        <div class="program-image-container">
+                            <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=600&h=400&q=80" alt="Pilates & Core" class="program-image" loading="lazy">
+                            <span class="program-badge">STRENGTH</span>
+                        </div>
+                        <div class="program-content">
+                            <h3 class="program-title">Pilates & Core</h3>
+                            <p class="program-description">Build core strength, improve posture, and enhance body awareness through Pilates exercises.</p>
+                            <div class="program-meta">
+                                <span>50 min</span>
+                                <span class="difficulty">Intermediate</span>
+                            </div>
+                            <a href="#" class="program-cta">Learn More →</a>
+                        </div>
+                    </article>
+                    <article class="program-card reveal">
+                        <div class="program-image-container">
+                            <img src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?auto=format&fit=crop&w=600&h=400&q=80" alt="Aqua Therapy" class="program-image" loading="lazy">
+                            <span class="program-badge">THERAPY</span>
+                        </div>
+                        <div class="program-content">
+                            <h3 class="program-title">Aqua Therapy</h3>
+                            <p class="program-description">Low-impact water exercises for rehabilitation, pain relief, and gentle strength building.</p>
+                            <div class="program-meta">
+                                <span>45 min</span>
+                                <span class="difficulty">Gentle</span>
+                            </div>
+                            <a href="#" class="program-cta">Learn More →</a>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
 
+        <!-- Why Section -->
         <section class="why">
             <div class="container">
                 <div class="why-grid">
-                    <div class="why-content">
-                        <h2 class="section-title reveal">THE APEX RECOVERY DIFFERENCE</h2>
+                    <div class="why-content reveal">
+                        <h2 class="section-title">The APEX Recovery Difference</h2>
+                        <p>At APEX GYM, we believe true fitness encompasses both body and mind. Our wellness-focused approach combines cutting-edge recovery technology with ancient healing practices.</p>
                         <ul class="usp-list">
-                            <!-- USPs -->
+                            <li>State-of-the-art cryotherapy chambers for rapid muscle recovery</li>
+                            <li>Infrared sauna sessions for detoxification and relaxation</li>
+                            <li>Certified massage therapists specializing in sports recovery</li>
+                            <li>Mindfulness and meditation programs for mental wellness</li>
+                            <li>Personalized nutrition plans from registered dietitians</li>
+                            <li>24/7 access to recovery zones and wellness amenities</li>
                         </ul>
                     </div>
                     <div class="why-image reveal from-right">
-                        <img src="https://images.unsplash.com/photo-1571013463-5c0e7847c4ce?auto=format&fit=crop&w=800&h=600" alt="Recovery zone" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&h=600&q=80" alt="APEX Recovery Zone" loading="lazy">
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="membership" class="membership">
+        <!-- Trainers Section -->
+        <section id="trainers" class="trainers">
             <div class="container">
-                <h2 class="section-title reveal">WELLNESS MEMBERSHIP</h2>
-                <div class="pricing-grid">
-                    <!-- Cards -->
+                <h2 class="section-title reveal">Wellness Experts</h2>
+                <p class="section-subtitle reveal">Our certified wellness professionals are dedicated to your holistic health journey.</p>
+                <div class="trainers-grid grid-4">
+                    <div class="trainer-card reveal">
+                        <img src="../images/trainers/trainer-1.jpg" alt="Sarah Johnson" class="trainer-image" loading="lazy">
+                        <div class="trainer-info">
+                            <h3>Sarah Johnson</h3>
+                            <p class="trainer-specialty">Yoga & Meditation</p>
+                            <div class="trainer-social">
+                                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trainer-card reveal">
+                        <img src="../images/trainers/trainer-2.jpg" alt="Mike Chen" class="trainer-image" loading="lazy">
+                        <div class="trainer-info">
+                            <h3>Mike Chen</h3>
+                            <p class="trainer-specialty">Recovery Specialist</p>
+                            <div class="trainer-social">
+                                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trainer-card reveal">
+                        <img src="../images/trainers/trainer-3.jpg" alt="Emma Rodriguez" class="trainer-image" loading="lazy">
+                        <div class="trainer-info">
+                            <h3>Emma Rodriguez</h3>
+                            <p class="trainer-specialty">Nutrition Coach</p>
+                            <div class="trainer-social">
+                                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trainer-card reveal">
+                        <img src="../images/trainers/trainer-4.jpg" alt="David Kim" class="trainer-image" loading="lazy">
+                        <div class="trainer-info">
+                            <h3>David Kim</h3>
+                            <p class="trainer-specialty">Pilates Instructor</p>
+                            <div class="trainer-social">
+                                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- Membership Section -->
+        <section id="membership" class="membership">
+            <div class="container">
+                <h2 class="section-title reveal">Wellness Membership</h2>
+                <p class="section-subtitle reveal">Choose the perfect plan for your wellness journey.</p>
+                <div class="pricing-grid">
+                    <div class="pricing-card reveal">
+                        <h3 class="pricing-title">Essential</h3>
+                        <div class="pricing-price">$79<span>/month</span></div>
+                        <ul class="pricing-features">
+                            <li>Access to gym facilities</li>
+                            <li>2 yoga classes per week</li>
+                            <li>Basic recovery zone access</li>
+                            <li>Nutrition guide</li>
+                            <li>Locker room access</li>
+                        </ul>
+                        <a href="#" class="pricing-cta">Get Started</a>
+                    </div>
+                    <div class="pricing-card featured reveal">
+                        <div class="badge">Most Popular</div>
+                        <h3 class="pricing-title">Wellness</h3>
+                        <div class="pricing-price">$149<span>/month</span></div>
+                        <ul class="pricing-features">
+                            <li>Unlimited gym access</li>
+                            <li>Unlimited yoga & pilates</li>
+                            <li>Full recovery zone access</li>
+                            <li>Monthly nutrition consultation</li>
+                            <li>2 massage sessions/month</li>
+                            <li>Meditation classes</li>
+                        </ul>
+                        <a href="#" class="pricing-cta">Get Started</a>
+                    </div>
+                    <div class="pricing-card reveal">
+                        <h3 class="pricing-title">Premium</h3>
+                        <div class="pricing-price">$249<span>/month</span></div>
+                        <ul class="pricing-features">
+                            <li>All Wellness benefits</li>
+                            <li>Personal wellness coach</li>
+                            <li>4 massage sessions/month</li>
+                            <li>Cryotherapy sessions</li>
+                            <li>Private sauna access</li>
+                            <li>Priority booking</li>
+                        </ul>
+                        <a href="#" class="pricing-cta">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="section-title reveal">Member Stories</h2>
+                <p class="section-subtitle reveal">Hear from our wellness community.</p>
+                <div class="testimonials-grid grid-3">
+                    <div class="testimonial-card reveal">
+                        <div class="testimonial-content">
+                            <p>"The recovery zone has completely transformed my post-workout routine. I feel better than ever!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&h=100&q=80" alt="Member" loading="lazy">
+                            <div>
+                                <h4>Jennifer M.</h4>
+                                <span>Wellness Member</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card reveal">
+                        <div class="testimonial-content">
+                            <p>"The yoga and meditation programs have helped me find balance I never knew I needed."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100&q=80" alt="Member" loading="lazy">
+                            <div>
+                                <h4>Robert T.</h4>
+                                <span>Wellness Member</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card reveal">
+                        <div class="testimonial-content">
+                            <p>"The nutrition coaching has been life-changing. I've never felt more energized and healthy."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&h=100&q=80" alt="Member" loading="lazy">
+                            <div>
+                                <h4>Amanda L.</h4>
+                                <span>Wellness Member</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
         <section class="final-cta">
             <div class="container">
                 <div class="final-cta-content reveal">
-                    <h2>READY TO RESTORE?</h2>
-                    <p>Experience our spa and recovery facilities.</p>
+                    <h2>Ready to Restore?</h2>
+                    <p>Experience our spa and recovery facilities with a complimentary tour.</p>
                     <a href="#membership" class="btn btn-primary btn-large">Book a Tour</a>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
                     <a href="../index.html" class="logo">APEX <span>GYM</span></a>
-                    <p class="tagline">Teal wellness focus.</p>
+                    <p class="tagline">Where wellness meets fitness.</p>
                     <div class="social">
                         <a href="#" class="social-icon" aria-label="Instagram">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -198,22 +444,37 @@
                         <li><a href="#programs">Yoga & Mobility</a></li>
                         <li><a href="#programs">Recovery Zone</a></li>
                         <li><a href="#programs">Nutrition Coaching</a></li>
+                        <li><a href="#programs">Meditation</a></li>
+                        <li><a href="#programs">Pilates & Core</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#trainers">Our Team</a></li>
+                        <li><a href="#membership">Membership</a></li>
+                        <li><a href="#contact">Careers</a></li>
+                        <li><a href="#contact">Press</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h3>Contact</h3>
                     <address>
-                        123 Fitness Street,<br>
-                        New York, NY 10001
+                        123 Wellness Avenue,<br>
+                        New York, NY 10001<br><br>
+                        <a href="tel:+1234567890">+1 (234) 567-890</a><br>
+                        <a href="mailto:wellness@apexgym.com">wellness@apexgym.com</a>
                     </address>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 APEX GYM. Demo V3.</p>
+                <p>&copy; 2024 APEX GYM. All rights reserved. Demo V3 - Teal Wellness.</p>
             </div>
         </div>
     </footer>
 
+    <!-- JavaScript -->
     <script src="../js/accordion.js" defer></script>
     <script src="../js/main.js" defer></script>
     <script src="../js/navbar.js" defer></script>
@@ -224,5 +485,6 @@
     <script src="../js/toggle.js" defer></script>
     <script src="../js/tabs.js" defer></script>
     <script src="../js/beforeafter.js" defer></script>
+    <script src="../demos/v3/js/v3.js" defer></script>
 </body>
 </html>
