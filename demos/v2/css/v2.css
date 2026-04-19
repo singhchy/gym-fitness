@@ -192,7 +192,8 @@ p {
     background-clip: text;
     color: var(--color-primary);
     margin-bottom: var(--space-md);
-    animation: fadeIn 1s ease;
+    opacity: 1;
+    animation: fadeIn 1s ease forwards;
     text-shadow: 0 2px 20px rgba(0, 212, 170, 0.3);
 }
 
@@ -242,6 +243,12 @@ p {
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+/* Override base hero-title styles for v2 theme */
+.hero[data-theme="v2"] .hero-title {
+    opacity: 1 !important;
+    animation: fadeIn 1s ease forwards !important;
 }
 
 /* ===== STATS SECTION ===== */
