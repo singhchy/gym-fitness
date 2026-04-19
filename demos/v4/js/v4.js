@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initCountUpAnimation();
     initProgramCardHover();
     initPricingCardHover();
+    initPricingToggle();
+    initPricingScrollReveal();
 });
 
 // ===== SCROLL REVEAL ANIMATION =====
@@ -200,7 +202,7 @@ function initProgramCardHover() {
 
 // ===== PRICING CARD HOVER EFFECT =====
 function initPricingCardHover() {
-    const pricingCards = document.querySelectorAll('.pricing-card');
+    const pricingCards = document.querySelectorAll('.pricing-card, .cyberpunk-pricing-card');
     
     pricingCards.forEach(card => {
         card.addEventListener('mouseenter', function() {
@@ -213,6 +215,120 @@ function initPricingCardHover() {
         card.addEventListener('mouseleave', function() {
             this.classList.remove('hovered');
         });
+    });
+}
+
+// ===== PRICING TOGGLE FUNCTIONALITY =====
+function initPricingToggle() {
+    // Old pricing toggle
+    const oldToggleButtons = document.querySelectorAll('.pricing-toggle-btn');
+    const oldPriceAmounts = document.querySelectorAll('.pricing-card-amount');
+    
+    if (oldToggleButtons.length > 0) {
+        oldToggleButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const period = this.getAttribute('data-period');
+                
+                // Update active state
+                oldToggleButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Update prices with fade effect
+                oldPriceAmounts.forEach(amount => {
+                    // Fade out
+                    amount.style.opacity = '0';
+                    
+                    setTimeout(() => {
+                        // Update price
+                        const newPrice = amount.getAttribute(`data-${period}`);
+                        amount.textContent = `$${newPrice}`;
+                        
+                        // Fade in
+                        amount.style.opacity = '1';
+                    }, 200);
+                });
+            });
+        });
+    }
+    
+    // New cyberpunk pricing toggle
+    const cyberToggleButtons = document.querySelectorAll('.cyberpunk-toggle-btn');
+    const cyberPriceAmounts = document.querySelectorAll('.cyberpunk-card-amount');
+    const cyberToggle = document.querySelector('.cyberpunk-pricing-toggle');
+    
+    if (cyberToggleButtons.length > 0) {
+        cyberToggleButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const period = this.getAttribute('data-period');
+                
+                // Update active state
+                cyberToggleButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Update toggle slider position
+                if (cyberToggle) {
+                    cyberToggle.setAttribute('data-active', period);
+                }
+                
+                // Update prices with fade effect
+                cyberPriceAmounts.forEach(amount => {
+                    // Fade out
+                    amount.style.opacity = '0';
+                    amount.style.transform = 'translateY(-10px)';
+                    
+                    setTimeout(() => {
+                        // Update price
+                        const newPrice = amount.getAttribute(`data-${period}`);
+                        amount.textContent = `$${newPrice}`;
+                        
+                        // Fade in
+                        amount.style.opacity = '1';
+                        amount.style.transform = 'translateY(0)';
+                    }, 200);
+                });
+            });
+        });
+    }
+}
+
+// ===== PRICING SCROLL REVEAL =====
+function initPricingScrollReveal() {
+    // Old pricing elements
+    const pricingHeaderLeft = document.querySelector('.pricing-header-left');
+    const pricingHeaderRight = document.querySelector('.pricing-header-right');
+    const pricingCards = document.querySelectorAll('.pricing-card');
+    
+    // New cyberpunk pricing elements
+    const cyberPricingHeader = document.querySelector('.cyberpunk-pricing-header');
+    const cyberPricingToggleWrapper = document.querySelector('.cyberpunk-pricing-toggle-wrapper');
+    const cyberPricingCards = document.querySelectorAll('.cyberpunk-pricing-card');
+    
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('reveal');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
+    
+    // Observe old pricing elements
+    if (pricingHeaderLeft) revealObserver.observe(pricingHeaderLeft);
+    if (pricingHeaderRight) revealObserver.observe(pricingHeaderRight);
+    
+    pricingCards.forEach(card => {
+        revealObserver.observe(card);
+    });
+    
+    // Observe new cyberpunk pricing elements
+    if (cyberPricingHeader) revealObserver.observe(cyberPricingHeader);
+    if (cyberPricingToggleWrapper) revealObserver.observe(cyberPricingToggleWrapper);
+    
+    cyberPricingCards.forEach(card => {
+        revealObserver.observe(card);
     });
 }
 
