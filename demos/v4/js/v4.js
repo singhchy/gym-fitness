@@ -4,16 +4,36 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize all V4 components
     initScrollReveal();
+    initNavbarScroll();
     initParallaxEffect();
     initSmoothScroll();
-    initMobileMenu();
-    initDropdownMenu();
+    // initMobileMenu(); - Handled by navbar.js
+    // initDropdownMenu(); - Handled by navbar.js
     initCountUpAnimation();
     initProgramCardHover();
     initPricingCardHover();
     initPricingToggle();
     initPricingScrollReveal();
+    if (typeof initV4BeforeAfter === 'function') {
+        initV4BeforeAfter();
+    }
+    initTestimonialSlider();
+    initScheduleTabs();
+    initFAQAccordion();
 });
+
+// ===== NAVBAR SCROLL STATE =====
+function initNavbarScroll() {
+    const navbar = document.querySelector('.navbar');
+    
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+}
 
 // ===== SCROLL REVEAL ANIMATION =====
 function initScrollReveal() {
@@ -306,7 +326,7 @@ function initPricingScrollReveal() {
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('reveal');
+                entry.target.classList.add('cyber-reveal');
                 revealObserver.unobserve(entry.target);
             }
         });
@@ -403,11 +423,145 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-// ===== LAZY LOADING ENHANCEMENT =====
-// Enhance native lazy loading with fade-in effect
-document.addEventListener('lazyloaded', function(e) {
-    e.target.classList.add('loaded');
-});
+// ===== BUTTERY SMOOTH TRANSFORMATION SLIDER =====
+function initV4BeforeAfter() {
+    const containers = document.querySelectorAll('.before-after-container');
+    containers.forEach(container => {
+        const slider = container.querySelector('.slider-handle');
+        const before = container.querySelector('.before-image');
+        const after = container.querySelector('.after-image');
+        
+        if (!slider || !before || !after) return;
+        
+        let targetPercent = 50;
+        let currentPercent = 50;
+        let isMoving = false;
+        
+        const updateSlider = () => {
+            // Smoothly interpolate current towards target
+            const lerpSpeed = 0.15;
+            currentPercent += (targetPercent - currentPercent) * lerpSpeed;
+            
+            before.style.clipPath = `inset(0 ${100 - currentPercent}% 0 0)`;
+            after.style.clipPath = `inset(0 0 0 ${currentPercent}%)`;
+            slider.style.left = `${currentPercent}%`;
+            
+            if (Math.abs(targetPercent - currentPercent) > 0.01) {
+                requestAnimationFrame(updateSlider);
+            } else {
+                isMoving = false;
+            }
+        };
+        
+        const onMove = (e) => {
+            const rect = container.getBoundingClientRect();
+            const clientX = e.type.includes('touch') ? e.touches[0].clientX : e.clientX;
+            const x = clientX - rect.left;
+            let percent = (x / rect.width) * 100;
+            targetPercent = Math.max(0, Math.min(100, percent));
+            
+            if (!isMoving) {
+                isMoving = true;
+                requestAnimationFrame(updateSlider);
+            }
+        };
+        
+        // Listen to move on container for direct interaction
+        container.addEventListener('mousemove', onMove);
+        container.addEventListener('touchmove', onMove, { passive: true });
+        
+        // Initial set
+        updateSlider();
+    });
+}
+
+// ===== TESTIMONIAL SLIDER =====
+function initTestimonialSlider() {
+    const track = document.querySelector('.testimonials-slider-track');
+    const slides = Array.from(track?.querySelectorAll('.testimonial-card') || []);
+    const nextBtn = document.querySelector('.testimonial-btn.btn-next');
+    const prevBtn = document.querySelector('.testimonial-btn.btn-prev');
+    
+    if (!track || slides.length === 0) return;
+    
+    let currentIndex = 0;
+    
+    function goToSlide(index) {
+        currentIndex = index;
+        const gap = parseInt(window.getComputedStyle(track).gap) || 0;
+        track.style.transform = `translateX(calc(-${currentIndex * 100}% - ${currentIndex * gap}px))`;
+    }
+    
+    nextBtn?.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        goToSlide(currentIndex);
+    });
+    
+    prevBtn?.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        goToSlide(currentIndex);
+    });
+    
+    // Auto play (Infinite Loop)
+    let interval = setInterval(() => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        goToSlide(currentIndex);
+    }, 6000);
+    
+    const stopAutoPlay = () => clearInterval(interval);
+    
+    track.addEventListener('mouseenter', stopAutoPlay);
+    nextBtn?.addEventListener('click', stopAutoPlay);
+    prevBtn?.addEventListener('click', stopAutoPlay);
+}
+
+// ===== SCHEDULE TABS =====
+function initScheduleTabs() {
+    const tabs = document.querySelectorAll('.schedule-tab');
+    const days = document.querySelectorAll('.schedule-day');
+    
+    if (tabs.length === 0 || days.length === 0) return;
+    
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const dayName = tab.getAttribute('data-day');
+            
+            // Remove active class from all tabs and days
+            tabs.forEach(t => t.classList.remove('active'));
+            days.forEach(d => d.classList.remove('active'));
+            
+            // Add active class to clicked tab and corresponding day
+            tab.classList.add('active');
+            const targetDay = document.querySelector(`.schedule-day[data-day="${dayName}"]`);
+            if (targetDay) {
+                targetDay.classList.add('active');
+            }
+        });
+    });
+}
+
+// ===== FAQ ACCORDION =====
+function initFAQAccordion() {
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    
+    if (faqQuestions.length === 0) return;
+    
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+            const faqItem = question.parentElement;
+            
+            // Close other items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                if (item !== faqItem) {
+                    item.classList.remove('active');
+                }
+            });
+            
+            // Toggle current item
+            faqItem.classList.toggle('active');
+        });
+    });
+}
 
 // ===== CONSOLE WELCOME MESSAGE =====
 console.log('%c APEX GYM - V4 Magazine Layout ', 'background: #FF3B30; color: #FFFFFF; font-size: 16px; font-weight: bold; padding: 10px;');
