@@ -54,46 +54,18 @@ function initNavbar() {
         });
     });
 
-    // Dropdown hover
-    if (dropdownToggle && dropdownMenu) {
-        dropdownToggle.addEventListener('mouseenter', () => {
-            dropdownMenu.style.opacity = '1';
-            dropdownMenu.style.visibility = 'visible';
-            dropdownMenu.style.transform = 'translateX(-50%) translateY(0)';
-        });
-
-        dropdownToggle.addEventListener('mouseleave', () => {
-            dropdownMenu.style.opacity = '0';
-            dropdownMenu.style.visibility = 'hidden';
-            dropdownMenu.style.transform = 'translateX(-50%) translateY(10px)';
-        });
-
-        dropdownMenu.addEventListener('mouseenter', () => {
-            dropdownMenu.style.opacity = '1';
-            dropdownMenu.style.visibility = 'visible';
-            dropdownMenu.style.transform = 'translateX(-50%) translateY(0)';
-        });
-
-        dropdownMenu.addEventListener('mouseleave', () => {
-            dropdownMenu.style.opacity = '0';
-            dropdownMenu.style.visibility = 'hidden';
-            dropdownMenu.style.transform = 'translateX(-50%) translateY(10px)';
-        });
-    }
-
-    // Close dropdown on click outside
-    document.addEventListener('click', (e) => {
-        if (!dropdownToggle?.contains(e.target) && !dropdownMenu?.contains(e.target)) {
-            if (dropdownMenu) {
-                dropdownMenu.style.opacity = '0';
-                dropdownMenu.style.visibility = 'hidden';
-                dropdownMenu.style.transform = 'translateX(-50%) translateY(10px)';
-            }
-        }
-    });
+    // Dropdown is handled by CSS :hover for desktop
+    // Mobile menu doesn't use the dropdown structure
 
     // Prevent dropdown toggle from navigating
     if (dropdownToggle) {
         dropdownToggle.addEventListener('click', (e) => e.preventDefault());
     }
+}
+
+// Self-initialize — works regardless of script load order
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initNavbar);
+} else {
+    initNavbar();
 }

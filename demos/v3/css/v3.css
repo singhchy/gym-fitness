@@ -17,11 +17,11 @@
     --v3-text-on-light: #1F2937;
     --v3-text-on-dark: #FFFFFF;
     --v3-text-on-primary: #FFFFFF;
-    
+
     /* V3 Typography - Modern Sans-Serif Stack */
     --v3-font-heading: 'Montserrat', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
     --v3-font-body: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-    
+
     /* V3 Spacing */
     --v3-space-xs: 0.5rem;
     --v3-space-sm: 1rem;
@@ -29,19 +29,19 @@
     --v3-space-lg: 4rem;
     --v3-space-xl: 6rem;
     --v3-space-xxl: 10rem;
-    
+
     /* V3 Border Radius */
     --v3-radius-sm: 12px;
     --v3-radius-md: 20px;
     --v3-radius-lg: 32px;
     --v3-radius-xl: 48px;
     --v3-radius-full: 9999px;
-    
+
     /* V3 Shadows */
     --v3-shadow-soft: 0 10px 40px rgba(13, 148, 136, 0.15);
     --v3-shadow-glow: 0 0 60px rgba(13, 148, 136, 0.3);
     --v3-shadow-card: 0 20px 60px rgba(0, 0, 0, 0.08);
-    
+
     /* V3 Gradients */
     --v3-gradient-primary: linear-gradient(135deg, var(--v3-primary) 0%, var(--v3-primary-light) 100%);
     --v3-gradient-warm: linear-gradient(135deg, var(--v3-cream) 0%, var(--v3-sage) 100%);
@@ -114,21 +114,33 @@ body[data-theme="v3"] .section-subtitle {
 }
 
 /* ===== NAVBAR V3 ===== */
+body[data-theme="v3"] .navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
 body[data-theme="v3"] .navbar {
     background: rgba(254, 243, 199, 0.95);
     backdrop-filter: blur(20px);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
     border-bottom: 1px solid rgba(13, 148, 136, 0.1);
+    z-index: 1010;
 }
 
 body[data-theme="v3"] .logo {
     font-family: var(--v3-font-heading);
     font-weight: 700;
     color: var(--v3-primary-dark);
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
 }
 
 body[data-theme="v3"] .logo span {
     color: var(--v3-primary);
+    margin-left: 5px;
 }
 
 body[data-theme="v3"] .nav-links a {
@@ -140,6 +152,71 @@ body[data-theme="v3"] .nav-links a {
 body[data-theme="v3"] .nav-links a:hover,
 body[data-theme="v3"] .nav-links a.active {
     color: var(--v3-primary);
+}
+
+/* Dropdown Menu V3 */
+body[data-theme="v3"] .dropdown-menu {
+    background-color: var(--v3-white);
+    border: 1px solid rgba(13, 148, 136, 0.1);
+    box-shadow: var(--v3-shadow-card);
+    border-radius: var(--v3-radius-md);
+    padding: 0.75rem 0;
+}
+
+body[data-theme="v3"] .dropdown-menu a {
+    color: var(--v3-charcoal);
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+}
+
+body[data-theme="v3"] .dropdown-menu a:hover {
+    background-color: var(--v3-sage);
+    color: var(--v3-primary-dark);
+}
+
+body[data-theme="v3"] .dropdown-menu a small {
+    display: block;
+    color: var(--v3-gray);
+    font-weight: 400;
+    margin-top: 0.25rem;
+}
+
+/* ===== MOBILE MENU & HAMBURGER V3 ===== */
+
+/* Hamburger icon — dark teal lines so visible on cream navbar */
+body[data-theme="v3"] .hamburger span {
+    background-color: var(--v3-primary-dark);
+}
+
+/* Cream-colored mobile overlay matching V3 palette */
+body[data-theme="v3"] .mobile-menu {
+    background-color: #fefde8;
+    z-index: 1005;
+}
+
+/* Logo inside mobile menu */
+body[data-theme="v3"] .mobile-menu-content .logo {
+    color: var(--v3-primary-dark);
+}
+
+body[data-theme="v3"] .mobile-menu-content .logo span {
+    color: var(--v3-primary);
+}
+
+/* Links in mobile menu */
+body[data-theme="v3"] .mobile-menu-content a {
+    color: var(--v3-charcoal);
+    text-decoration: none;
+}
+
+body[data-theme="v3"] .mobile-menu-content ul li a:hover {
+    color: var(--v3-primary);
+}
+
+/* CTA button in mobile menu */
+body[data-theme="v3"] .mobile-menu-content .cta-button {
+    background: var(--v3-gradient-primary);
+    color: var(--v3-white);
 }
 
 body[data-theme="v3"] .cta-button {
@@ -521,8 +598,10 @@ body[data-theme="v3"] .why-image {
 
 body[data-theme="v3"] .why-image img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     display: block;
+    opacity: 1; /* Reset the layout.css opacity if needed, though layout is 0.6 */
 }
 
 /* ===== TRAINERS SECTION V3 ===== */
@@ -609,6 +688,16 @@ body[data-theme="v3"] .trainer-social a {
     color: var(--v3-primary-dark);
     transition: all var(--transition-base);
     font-size: 1.1rem;
+    text-decoration: none;
+}
+
+body[data-theme="v3"] .trainer-social a,
+body[data-theme="v3"] .trainer-social a i,
+body[data-theme="v3"] .trainer-card a,
+body[data-theme="v3"] .trainer-card a:hover {
+    text-decoration: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
 }
 
 body[data-theme="v3"] .trainer-social a:hover {
@@ -859,8 +948,15 @@ body[data-theme="v3"] .final-cta::before {
 }
 
 @keyframes float {
-    0%, 100% { transform: translate(0, 0); }
-    50% { transform: translate(50px, 50px); }
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(50px, 50px);
+    }
 }
 
 body[data-theme="v3"] .final-cta-content {
@@ -958,11 +1054,18 @@ body[data-theme="v3"] .footer .social-icon {
     border-radius: 50%;
     color: var(--v3-white);
     transition: all var(--transition-base);
+    text-decoration: none;
+}
+
+body[data-theme="v3"] .footer .social-icon svg {
+    width: 18px;
+    height: 18px;
 }
 
 body[data-theme="v3"] .footer .social-icon:hover {
     background: var(--v3-primary);
     transform: translateY(-3px);
+    text-decoration: none;
 }
 
 body[data-theme="v3"] .footer-bottom {
@@ -987,108 +1090,181 @@ body[data-theme="v3"] .footer address a {
 
 body[data-theme="v3"] .footer address a:hover {
     color: var(--v3-primary-light);
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
-@media (min-width: 768px) {
+
+/* Desktop & Tablet (Wide): show full nav, hide hamburger */
+@media (min-width: 769px) {
+    body[data-theme="v3"] .hamburger {
+        display: none;
+    }
+
+    body[data-theme="v3"] .nav-links {
+        display: flex;
+    }
+
     body[data-theme="v3"] .stats-grid {
         grid-template-columns: repeat(4, 1fr);
     }
-    
+
     body[data-theme="v3"] .why-grid {
         grid-template-columns: 1fr 1fr;
     }
 }
 
-@media (max-width: 767px) {
+/* Tablet adjustments (769px - 1024px) to prevent layout breakage */
+@media (max-width: 1024px) and (min-width: 769px) {
+    body[data-theme="v3"] .navbar .container {
+        gap: 1rem;
+    }
+
+    body[data-theme="v3"] .logo {
+        font-size: 1.5rem;
+    }
+
+    body[data-theme="v3"] .nav-links {
+        gap: 1rem;
+    }
+
+    body[data-theme="v3"] .nav-links a {
+        font-size: 0.9rem;
+    }
+
+    body[data-theme="v3"] .cta-button {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Tablet & mobile: 768px and below — hide nav, show hamburger */
+@media (max-width: 768px) {
+    body[data-theme="v3"] .nav-links {
+        display: none !important;
+    }
+
+    body[data-theme="v3"] .cta-button {
+        display: none;
+    }
+
+    body[data-theme="v3"] .hamburger {
+        display: flex;
+    }
+
+    body[data-theme="v3"] .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--v3-space-md);
+    }
+
+    body[data-theme="v3"] .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    body[data-theme="v3"] .why-image {
+        min-height: 300px;
+    }
+
+    body[data-theme="v3"] .programs-track {
+        grid-template-columns: 1fr;
+    }
+
+    body[data-theme="v3"] .trainers-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    body[data-theme="v3"] .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    body[data-theme="v3"] .pricing-card.featured {
+        transform: none;
+    }
+
+    body[data-theme="v3"] .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    body[data-theme="v3"] .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+/* Mobile: 480px and below */
+@media (max-width: 480px) {
+
     .hero-v3::before,
     .hero-v3 .teal-gradient {
         width: 100%;
         clip-path: none;
         opacity: 0.85;
     }
-    
+
     .hero-v3 .hero-content {
         text-align: center;
         margin: 0 auto;
         padding: 0 var(--v3-space-sm);
     }
-    
+
     .hero-v3 .hero-title {
-        font-size: clamp(2.5rem, 10vw, 4rem);
+        font-size: clamp(2rem, 9vw, 3rem);
         text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     }
-    
+
     .hero-v3 .hero-subtitle {
-        font-size: 1.125rem;
-        text-shadow: 0 1px 4px rgba(255, 255, 255, 0.7);
+        font-size: 1rem;
     }
-    
+
     .hero-v3 .hero-cta {
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
     }
-    
-    body[data-theme="v3"] .pricing-card.featured {
-        transform: none;
+
+    body[data-theme="v3"] .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
-    
-    body[data-theme="v3"] .pricing-card.featured:hover {
-        transform: translateY(-10px);
-    }
-    
+
     body[data-theme="v3"] .stat {
         padding: var(--v3-space-sm);
     }
-    
+
     body[data-theme="v3"] .stat-number {
         font-size: clamp(2rem, 8vw, 3rem);
     }
-    
+
     body[data-theme="v3"] .stat-label {
         font-size: 0.875rem;
     }
-    
-    /* Trainers Section Mobile */
+
     body[data-theme="v3"] .trainers-grid {
         grid-template-columns: 1fr;
         gap: var(--v3-space-md);
     }
-    
+
     body[data-theme="v3"] .trainer-card {
-        max-width: 350px;
+        max-width: 360px;
         margin: 0 auto;
     }
-    
-    body[data-theme="v3"] .trainer-info h3 {
-        font-size: 1.25rem;
-    }
-    
-    body[data-theme="v3"] .trainer-specialty {
-        font-size: 0.9375rem;
-    }
-    
-    /* Testimonials Section Mobile */
-    body[data-theme="v3"] .testimonials-grid {
-        grid-template-columns: 1fr;
-        gap: var(--v3-space-md);
-    }
-    
+
     body[data-theme="v3"] .testimonial-card {
         padding: var(--v3-space-md);
     }
-    
+
     body[data-theme="v3"] .testimonial-content p {
         font-size: 1rem;
         line-height: 1.7;
     }
-    
-    body[data-theme="v3"] .testimonial-author h4 {
-        font-size: 1rem;
+
+    body[data-theme="v3"] .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
-    
-    body[data-theme="v3"] .testimonial-author span {
-        font-size: 0.8125rem;
+
+    body[data-theme="v3"] .pricing-card.featured:hover {
+        transform: translateY(-5px);
     }
 }
 
@@ -1098,6 +1274,7 @@ body[data-theme="v3"] .footer address a:hover {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -1139,8 +1316,15 @@ body[data-theme="v3"] .footer address a:hover {
 }
 
 @keyframes floating {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
 }
 
 /* ===== PULSE ANIMATION ===== */
@@ -1149,6 +1333,13 @@ body[data-theme="v3"] .footer address a:hover {
 }
 
 @keyframes pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); }
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
 }

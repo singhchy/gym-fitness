@@ -1843,22 +1843,21 @@ body[data-theme="v4"] .navbar.scrolled {
 .dropdown:hover .dropdown-toggle .arrow {
   transform: rotate(180deg);
 }
-
 .dropdown-menu {
   position: absolute;
   top: 100%;
   left: 0;
   width: 240px;
-  background-color: #222222;
+  background-color: var(--v4-white);
   border-radius: 12px;
   padding: 24px 32px;
   opacity: 0;
   visibility: hidden;
   transform: translateY(10px);
   transition: all var(--v4-transition-base);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
   z-index: 1001;
-  border: none;
+  border: 1px solid var(--v4-gray-light);
 }
 
 .dropdown:hover .dropdown-menu {
@@ -1868,24 +1867,16 @@ body[data-theme="v4"] .navbar.scrolled {
 }
 
 .dropdown-menu a {
-  display: flex;
-  flex-direction: column;
-  padding: 20px 32px;
-  color: #ffffff;
+  display: block;
+  color: var(--v4-text-primary);
   text-decoration: none;
-  font-family: var(--v4-font-heading);
-  font-size: 1.1rem;
-  font-weight: 600;
-  line-height: 1.2;
-  text-transform: none;
-  letter-spacing: 0.02em;
   transition: all var(--v4-transition-fast);
 }
 
 .dropdown-menu a small {
   display: block;
   font-size: 0.85rem;
-  color: #99f6e4;
+  color: var(--v4-text-secondary);
   margin-top: 4px;
   font-weight: 500;
   font-family: var(--v4-font-body);
@@ -1900,12 +1891,14 @@ body[data-theme="v4"] .navbar.scrolled {
 }
 
 .dropdown-menu a:hover {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: var(--v4-off-white);
   padding-left: 28px;
+  border-radius: var(--v4-radius-sm);
+  color: var(--v4-primary);
 }
 
 .dropdown-menu a:hover small {
-  color: #ffffff;
+  color: var(--v4-primary-dark);
   opacity: 1;
 }
 
