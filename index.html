@@ -1,761 +1,1191 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>APEX GYM | Premium Fitness Center</title>
-    <meta name="description" content="Push your limits. Build your legacy. APEX GYM is where strength meets science.">
-    <meta name="theme-color" content="#121212">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+    <meta
+      name="description"
+      content="Push your limits. Build your legacy. APEX GYM is where strength meets science."
+    />
+    <meta name="theme-color" content="#121212" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Oswald:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <!-- Preload critical CSS -->
-    <link rel="preload" href="css/globals.css" as="style">
-    <link rel="preload" href="css/layout.css" as="style">
-    <link rel="preload" href="css/hero.css" as="style">
+    <link rel="preload" href="css/globals.css" as="style" />
+    <link rel="preload" href="css/layout.css" as="style" />
+    <link rel="preload" href="css/hero.css" as="style" />
     <!-- CSS -->
-    <link rel="stylesheet" href="css/globals.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/hero.css">
-    <link rel="stylesheet" href="css/stats.css">
-    <link rel="stylesheet" href="css/programs.css">
-    <link rel="stylesheet" href="css/membership.css">
-    <link rel="stylesheet" href="css/trainers.css">
-    <link rel="stylesheet" href="css/testimonials.css">
-    <link rel="stylesheet" href="css/transformation.css">
-    <link rel="stylesheet" href="css/schedule.css">
-    <link rel="stylesheet" href="css/faq.css">
-    <link rel="stylesheet" href="css/gallery.css">
-    <link rel="stylesheet" href="css/cta.css">
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-</head>
-<body data-theme="v1">
+    <link rel="stylesheet" href="css/globals.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/stats.css" />
+    <link rel="stylesheet" href="css/programs.css" />
+    <link rel="stylesheet" href="css/membership.css" />
+    <link rel="stylesheet" href="css/trainers.css" />
+    <link rel="stylesheet" href="css/testimonials.css" />
+    <link rel="stylesheet" href="css/transformation.css" />
+    <link rel="stylesheet" href="css/schedule.css" />
+    <link rel="stylesheet" href="css/faq.css" />
+    <link rel="stylesheet" href="css/gallery.css" />
+    <link rel="stylesheet" href="css/cta.css" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+  </head>
+  <body data-theme="v1">
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="container">
-            <a href="index.html" class="logo">APEX <span>GYM</span></a>
-            <ul class="nav-links">
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#programs">Programs</a></li>
-                <li><a href="#trainers">Trainers</a></li>
-                <li><a href="#membership">Membership</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle">Demos <span class="arrow">▼</span></a>
-                    <div class="dropdown-menu">
-                        <a href="index.html">Demo V1 <small>Default Dark</small></a>
-                        <a href="demos/v2.html">Demo V2 <small>Minimal Editorial</small></a>
-                        <a href="demos/v3.html">Demo V3 <small>Teal Wellness</small></a>
-                        <a href="demos/v4.html">Demo V4 <small>Magazine Layout</small></a>
-                    </div>
-                </li>
-            </ul>
-            <a href="#membership" class="cta-button">Join Now</a>
-            <button class="hamburger" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
+      <div class="container">
+        <a href="index.html" class="logo">APEX <span>GYM</span></a>
+        <ul class="nav-links">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#programs">Programs</a></li>
+          <li><a href="#trainers">Trainers</a></li>
+          <li><a href="#membership">Membership</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle"
+              >Demos <span class="arrow">▼</span></a
+            >
+            <div class="dropdown-menu">
+              <a href="index.html">Demo V1 <small>Default Dark</small></a>
+              <a href="demos/v2.html"
+                >Demo V2 <small>Minimal Editorial</small></a
+              >
+              <a href="demos/v3.html">Demo V3 <small>Teal Wellness</small></a>
+              <a href="demos/v4.html">Demo V4 <small>Magazine Layout</small></a>
+            </div>
+          </li>
+        </ul>
+        <a href="#membership" class="cta-button">Join Now</a>
+        <button class="hamburger" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </nav>
 
     <!-- Mobile Overlay Menu -->
     <div class="mobile-menu">
-        <div class="mobile-menu-content">
-            <a href="index.html" class="logo">APEX <span>GYM</span></a>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#programs">Programs</a></li>
-                <li><a href="#trainers">Trainers</a></li>
-                <li><a href="#membership">Membership</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="demos/v2.html">Demo V2</a></li>
-                <li><a href="demos/v3.html">Demo V3</a></li>
-                <li><a href="demos/v4.html">Demo V4</a></li>
-            </ul>
-            <a href="#membership" class="cta-button">Join Now</a>
-        </div>
+      <div class="mobile-menu-content">
+        <a href="index.html" class="logo">APEX <span>GYM</span></a>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#programs">Programs</a></li>
+          <li><a href="#trainers">Trainers</a></li>
+          <li><a href="#membership">Membership</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="demos/v2.html">Demo V2</a></li>
+          <li><a href="demos/v3.html">Demo V3</a></li>
+          <li><a href="demos/v4.html">Demo V4</a></li>
+        </ul>
+        <a href="#membership" class="cta-button">Join Now</a>
+      </div>
     </div>
 
     <main>
-        <!-- Hero Section -->
-        <section id="home" class="hero">
-            <div class="hero-background">
-                <div class="video-overlay"></div>
-                <img src="images/hero/hero-bg.jpg" alt="Gym background" class="hero-background-image" fetchpriority="high" decoding="async">
+      <!-- Hero Section -->
+      <section id="home" class="hero">
+        <div class="hero-background">
+          <div class="video-overlay"></div>
+          <img
+            src="images/hero/hero-bg.jpg"
+            alt="Gym background"
+            class="hero-background-image"
+            fetchpriority="high"
+            decoding="async"
+          />
+        </div>
+        <div class="container">
+          <div class="hero-content reveal">
+            <span class="badge">EST. 2019 · ELITE FITNESS</span>
+            <h1 class="hero-title">PUSH YOUR LIMITS. BUILD YOUR LEGACY.</h1>
+            <p class="hero-subtitle">Where strength meets science.</p>
+            <div class="hero-cta">
+              <a href="#membership" class="btn btn-primary">Start Free Trial</a>
+              <a href="#" class="btn btn-secondary">Watch Our Story ▶</a>
             </div>
-            <div class="container">
-                <div class="hero-content reveal">
-                    <span class="badge">EST. 2019 · ELITE FITNESS</span>
-                    <h1 class="hero-title">PUSH YOUR LIMITS. BUILD YOUR LEGACY.</h1>
-                    <p class="hero-subtitle">Where strength meets science.</p>
-                    <div class="hero-cta">
-                        <a href="#membership" class="btn btn-primary">Start Free Trial</a>
-                        <a href="#" class="btn btn-secondary">Watch Our Story ▶</a>
-                    </div>
-                    <p class="trust-line">No contracts · Free 7-day trial · Cancel anytime</p>
+            <p class="trust-line">
+              No contracts · Free 7-day trial · Cancel anytime
+            </p>
+          </div>
+        </div>
+        <div class="scroll-indicator">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 5V19M12 19L19 12M12 19L5 12"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </section>
+
+      <!-- Stats Bar -->
+      <section class="stats">
+        <div class="container">
+          <div class="stats-grid">
+            <div class="stat">
+              <span class="stat-number" data-count="2400">0</span>
+              <span class="stat-label">Members</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" data-count="15">0</span>
+              <span class="stat-label">Expert Trainers</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" data-count="98">0</span>
+              <span class="stat-label">Satisfaction Rate</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" data-count="8">0</span>
+              <span class="stat-label">Years In Business</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Programs -->
+      <section id="programs" class="programs">
+        <div class="container">
+          <h2 class="section-title reveal">OUR PROGRAMS</h2>
+          <p class="section-subtitle reveal">
+            Choose from 8+ specialized training disciplines.
+          </p>
+          <div class="programs-track">
+            <article class="program-card reveal">
+              <div class="program-image-container">
+                <img
+                  src="images/programs/program-1.jpg"
+                  alt="Strength & Powerlifting"
+                  class="program-image"
+                  loading="lazy"
+                />
+                <span class="program-badge">STRENGTH</span>
+              </div>
+              <div class="program-content">
+                <h3 class="program-title">Strength & Powerlifting</h3>
+                <p class="program-description">
+                  Build raw power with barbell fundamentals.
+                </p>
+                <div class="program-meta">
+                  <span>60 min</span>
+                  <span class="difficulty">Hard</span>
                 </div>
-            </div>
-            <div class="scroll-indicator">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 5V19M12 19L19 12M12 19L5 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </div>
-        </section>
-
-        <!-- Stats Bar -->
-        <section class="stats">
-            <div class="container">
-                <div class="stats-grid">
-                    <div class="stat">
-                        <span class="stat-number" data-count="2400">0</span>
-                        <span class="stat-label">Members</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number" data-count="15">0</span>
-                        <span class="stat-label">Expert Trainers</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number" data-count="98">0</span>
-                        <span class="stat-label">Satisfaction Rate</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number" data-count="8">0</span>
-                        <span class="stat-label">Years In Business</span>
-                    </div>
+                <a href="#" class="program-cta">Explore →</a>
+              </div>
+            </article>
+            <article class="program-card reveal">
+              <div class="program-image-container">
+                <img
+                  src="images/programs/program-2.jpg"
+                  alt="HIIT & Cardio Blast"
+                  class="program-image"
+                  loading="lazy"
+                />
+                <span class="program-badge">CARDIO</span>
+              </div>
+              <div class="program-content">
+                <h3 class="program-title">HIIT & Cardio Blast</h3>
+                <p class="program-description">
+                  High‑intensity intervals for maximum calorie burn.
+                </p>
+                <div class="program-meta">
+                  <span>45 min</span>
+                  <span class="difficulty">Medium</span>
                 </div>
-            </div>
-        </section>
-
-        <!-- Programs -->
-        <section id="programs" class="programs">
-            <div class="container">
-                <h2 class="section-title reveal">OUR PROGRAMS</h2>
-                <p class="section-subtitle reveal">Choose from 8+ specialized training disciplines.</p>
-                <div class="programs-track">
-                    <article class="program-card reveal">
-                                            <div class="program-image-container">
-                                                <img src="images/programs/program-1.jpg" alt="Strength & Powerlifting" class="program-image" loading="lazy">
-                                                <span class="program-badge">STRENGTH</span>
-                                            </div>
-                                            <div class="program-content">
-                                                <h3 class="program-title">Strength & Powerlifting</h3>
-                                                <p class="program-description">Build raw power with barbell fundamentals.</p>
-                                                <div class="program-meta">
-                                                    <span>60 min</span>
-                                                    <span class="difficulty">Hard</span>
-                                                </div>
-                                                <a href="#" class="program-cta">Explore →</a>
-                                            </div>
-                                        </article>
-                                        <article class="program-card reveal">
-                                            <div class="program-image-container">
-                                                <img src="images/programs/program-2.jpg" alt="HIIT & Cardio Blast" class="program-image" loading="lazy">
-                                                <span class="program-badge">CARDIO</span>
-                                            </div>
-                                            <div class="program-content">
-                                                <h3 class="program-title">HIIT & Cardio Blast</h3>
-                                                <p class="program-description">High‑intensity intervals for maximum calorie burn.</p>
-                                                <div class="program-meta">
-                                                    <span>45 min</span>
-                                                    <span class="difficulty">Medium</span>
-                                                </div>
-                                                <a href="#" class="program-cta">Explore →</a>
-                                            </div>
-                                        </article>
-                                        <article class="program-card reveal">
-                                            <div class="program-image-container">
-                                                <img src="images/programs/program-3.jpg" alt="CrossFit / Functional Training" class="program-image" loading="lazy">
-                                                <span class="program-badge">FUNCTIONAL</span>
-                                            </div>
-                                            <div class="program-content">
-                                                <h3 class="program-title">CrossFit / Functional Training</h3>
-                                                <p class="program-description">Constantly varied functional movements.</p>
-                                                <div class="program-meta">
-                                                    <span>60 min</span>
-                                                    <span class="difficulty">Hard</span>
-                                                </div>
-                                                <a href="#" class="program-cta">Explore →</a>
-                                            </div>
-                                        </article>
-                                        <article class="program-card reveal">
-                                            <div class="program-image-container">
-                                                <img src="images/programs/program-4.jpg" alt="Yoga & Mobility" class="program-image" loading="lazy">
-                                                <span class="program-badge">MOBILITY</span>
-                                            </div>
-                                            <div class="program-content">
-                                                <h3 class="program-title">Yoga & Mobility</h3>
-                                                <p class="program-description">Improve flexibility and mind‑body connection.</p>
-                                                <div class="program-meta">
-                                                    <span>50 min</span>
-                                                    <span class="difficulty">Easy</span>
-                                                </div>
-                                                <a href="#" class="program-cta">Explore →</a>
-                                            </div>
-                                        </article>
-                                        <article class="program-card reveal">
-                                            <div class="program-image-container">
-                                                <img src="images/programs/program-5.jpg" alt="Boxing & MMA" class="program-image" loading="lazy">
-                                                <span class="program-badge">COMBAT</span>
-                                            </div>
-                                            <div class="program-content">
-                                                <h3 class="program-title">Boxing & MMA</h3>
-                                                <p class="program-description">Learn striking, grappling, and self‑defense.</p>
-                                                <div class="program-meta">
-                                                    <span>55 min</span>
-                                                    <span class="difficulty">Medium</span>
-                                                </div>
-                                                <a href="#" class="program-cta" aria-label="Explore Boxing & MMA program">Explore →</a>
-                                            </div>
-                                        </article>
-                                        <article class="program-card reveal">
-                                            <div class="program-image-container">
-                                                <img src="images/programs/program-6.jpg" alt="Body Transformation Program" class="program-image" loading="lazy">
-                                                <span class="program-badge">TRANSFORM</span>
-                                            </div>
-                                            <div class="program-content">
-                                                <h3 class="program-title">Body Transformation Program</h3>
-                                                <p class="program-description">Personalized plan for fat loss & muscle gain.</p>
-                                                <div class="program-meta">
-                                                    <span>12 weeks</span>
-                                                    <span class="difficulty">Medium</span>
-                                                </div>
-                                                <a href="#" class="program-cta" aria-label="Explore Body Transformation Program">Explore →</a>
-                                            </div>
-                                        </article>
-                                        <article class="program-card reveal">
-                                            <div class="program-image-container">
-                                                <img src="images/programs/program-7.jpg" alt="Personal Training (1‑on‑1)" class="program-image" loading="lazy">
-                                                <span class="program-badge">PERSONAL</span>
-                                            </div>
-                                            <div class="program-content">
-                                                <h3 class="program-title">Personal Training (1‑on‑1)</h3>
-                                                <p class="program-description">Tailored coaching for your specific goals.</p>
-                                                <div class="program-meta">
-                                                    <span>Custom</span>
-                                                    <span class="difficulty">Any</span>
-                                                </div>
-                                                <a href="#" class="program-cta" aria-label="Explore Personal Training (1‑on‑1) program">Explore →</a>
-                                            </div>
-                                        </article>
-                                        <article class="program-card reveal">
-                                            <div class="program-image-container">
-                                                <img src="images/programs/program-8.jpg" alt="Group Classes" class="program-image" loading="lazy">
-                                                <span class="program-badge">GROUP</span>
-                                            </div>
-                                            <div class="program-content">
-                                                <h3 class="program-title">Group Classes</h3>
-                                                <p class="program-description">Motivating group sessions with expert trainers.</p>
-                                                <div class="program-meta">
-                                                    <span>50 min</span>
-                                                    <span class="difficulty">Varied</span>
-                                                </div>
-                                                <a href="#" class="program-cta" aria-label="Explore Group Classes program">Explore →</a>
-                                            </div>
-                                        </article>
+                <a href="#" class="program-cta">Explore →</a>
+              </div>
+            </article>
+            <article class="program-card reveal">
+              <div class="program-image-container">
+                <img
+                  src="images/programs/program-3.jpg"
+                  alt="CrossFit / Functional Training"
+                  class="program-image"
+                  loading="lazy"
+                />
+                <span class="program-badge">FUNCTIONAL</span>
+              </div>
+              <div class="program-content">
+                <h3 class="program-title">CrossFit / Functional Training</h3>
+                <p class="program-description">
+                  Constantly varied functional movements.
+                </p>
+                <div class="program-meta">
+                  <span>60 min</span>
+                  <span class="difficulty">Hard</span>
                 </div>
-            </div>
-        </section>
-
-        <!-- Why Choose Us -->
-        <section class="why">
-            <div class="why-background">
-                <div class="why-overlay"></div>
-                <div class="why-image reveal from-right">
-                    <img src="images/hero/Gym-interior.jpg" alt="Gym interior" loading="lazy">
+                <a href="#" class="program-cta">Explore →</a>
+              </div>
+            </article>
+            <article class="program-card reveal">
+              <div class="program-image-container">
+                <img
+                  src="images/programs/program-4.jpg"
+                  alt="Yoga & Mobility"
+                  class="program-image"
+                  loading="lazy"
+                />
+                <span class="program-badge">MOBILITY</span>
+              </div>
+              <div class="program-content">
+                <h3 class="program-title">Yoga & Mobility</h3>
+                <p class="program-description">
+                  Improve flexibility and mind‑body connection.
+                </p>
+                <div class="program-meta">
+                  <span>50 min</span>
+                  <span class="difficulty">Easy</span>
                 </div>
-            </div>
-            <div class="container">
-                <div class="why-content">
-                    <h2 class="section-title reveal">WHY CHOOSE APEX GYM</h2>
-                    <div class="usp-cards-grid">
-                        <div class="usp-card reveal">
-                            <div class="usp-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z" />
-                                </svg>
-                            </div>
-                            <h3>Cutting‑Edge Equipment</h3>
-                            <p>Train with the latest Technogym, Rogue, and Hammer Strength machines.</p>
-                        </div>
-                        <div class="usp-card reveal">
-                            <div class="usp-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM9 7.5A.75.75 0 019 9h.253a2.25 2.25 0 011.837.944.75.75 0 01-1.212.883 1.25 1.25 0 00-1.02-.527H9.75v1.5H9a.75.75 0 010-1.5h.253a3.75 3.75 0 013.06 1.527.75.75 0 01-1.212.883A2.25 2.25 0 009.253 12H9a.75.75 0 010-1.5h.75V9H9zm6 0a.75.75 0 01.75.75v4.5a.75.75 0 01-1.5 0v-4.5A.75.75 0 0115 7.5z" clip-rule="evenodd" />
-                                </svg>
-                            </div>
-                            <h3>Elite Certified Trainers</h3>
-                            <p>1‑on‑1 coaching from industry‑leading professionals.</p>
-                        </div>
-                        <div class="usp-card reveal">
-                            <div class="usp-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M12 1.5a5.25 5.25 0 00-5.25 5.25v3a3 3 0 00-3 3v6.75a3 3 0 003 3h10.5a3 3 0 003-3v-6.75a3 3 0 00-3-3v-3c0-2.9-2.35-5.25-5.25-5.25zm3.75 8.25v-3a3.75 3.75 0 10-7.5 0v3h7.5z" clip-rule="evenodd" />
-                                </svg>
-                            </div>
-                            <h3>24/7 Access & Security</h3>
-                            <p>Your gym, your schedule. Biometric entry & CCTV monitoring.</p>
-                        </div>
-                        <div class="usp-card reveal">
-                            <div class="usp-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M18.375 2.25c-1.035 0-1.875.84-1.875 1.875v15.75c0 1.035.84 1.875 1.875 1.875h.75c1.035 0 1.875-.84 1.875-1.875V4.125c0-1.036-.84-1.875-1.875-1.875h-.75zM9.75 8.625c0-1.036.84-1.875 1.875-1.875h.75c1.036 0 1.875.84 1.875 1.875v11.25c0 1.035-.84 1.875-1.875 1.875h-.75a1.875 1.875 0 01-1.875-1.875V8.625zM3 13.125c0-1.036.84-1.875 1.875-1.875h.75c1.036 0 1.875.84 1.875 1.875v6.75c0 1.035-.84 1.875-1.875 1.875h-.75A1.875 1.875 0 013 19.875v-6.75z" />
-                                </svg>
-                            </div>
-                            <h3>Personalized Progress Tracking</h3>
-                            <p>AI‑powered analytics to measure every rep, set, and milestone.</p>
-                        </div>
-                        <div class="usp-card reveal">
-                            <div class="usp-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M8.25 6.75a3.75 3.75 0 117.5 0 3.75 3.75 0 01-7.5 0zM15.75 9.75a3 3 0 116 0 3 3 0 01-6 0zM2.25 9.75a3 3 0 116 0 3 3 0 01-6 0zM6.31 15.117A6.745 6.745 0 0112 12a6.745 6.745 0 016.709 7.498.75.75 0 01-.372.568A12.696 12.696 0 0112 21.75c-2.305 0-4.47-.612-6.337-1.684a.75.75 0 01-.372-.568 6.787 6.787 0 011.019-4.38z" clip-rule="evenodd" />
-                                    <path d="M5.082 14.254a8.287 8.287 0 00-1.308 5.135 9.687 9.687 0 01-1.764-.44l-.115-.04a.563.563 0 01-.373-.487l-.01-.121a3.75 3.75 0 013.57-4.047zM20.226 19.389a8.287 8.287 0 00-1.308-5.135 3.75 3.75 0 013.57 4.047l-.01.121a.563.563 0 01-.373.486l-.115.04c-.567.2-1.156.349-1.764.441z" />
-                                </svg>
-                            </div>
-                            <h3>Inclusive Community Vibe</h3>
-                            <p>Join a supportive network of 2,400+ motivated members.</p>
-                        </div>
-                        <div class="usp-card reveal">
-                            <div class="usp-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm3 10.5a.75.75 0 000-1.5H9a.75.75 0 000 1.5h6z" clip-rule="evenodd" />
-                                </svg>
-                            </div>
-                            <h3>No‑Contract Flexibility</h3>
-                            <p>Month‑to‑month membership, cancel anytime.</p>
-                        </div>
-                    </div>
+                <a href="#" class="program-cta">Explore →</a>
+              </div>
+            </article>
+            <article class="program-card reveal">
+              <div class="program-image-container">
+                <img
+                  src="images/programs/program-5.jpg"
+                  alt="Boxing & MMA"
+                  class="program-image"
+                  loading="lazy"
+                />
+                <span class="program-badge">COMBAT</span>
+              </div>
+              <div class="program-content">
+                <h3 class="program-title">Boxing & MMA</h3>
+                <p class="program-description">
+                  Learn striking, grappling, and self‑defense.
+                </p>
+                <div class="program-meta">
+                  <span>55 min</span>
+                  <span class="difficulty">Medium</span>
                 </div>
-            </div>
-        </section>
-
-        <!-- About Us -->
-        <section id="about" class="about">
-            <div class="container">
-                <h2 class="section-title reveal">OUR STORY</h2>
-                <p class="section-subtitle reveal">Where strength meets science since 2019.</p>
-                <div class="about-content">
-                    <div class="about-text reveal from-left">
-                        <p>APEX GYM was founded on a simple belief: fitness should be intelligent, personalized, and accessible. We combine cutting‑edge equipment with evidence‑based training methodologies to deliver results that last.</p>
-                        <p>Our team of elite trainers, nutritionists, and sports scientists work together to create a holistic environment where every member can push their limits and build a legacy of health.</p>
-                        <ul class="about-features">
-                            <li><strong>Evidence‑Based Programming</strong> – Every workout is backed by sports science.</li>
-                            <li><strong>Community‑Driven</strong> – A supportive network of 2,400+ motivated members.</li>
-                            <li><strong>Continuous Innovation</strong> – Regularly updated equipment and class formats.</li>
-                            <li><strong>Transparent Progress</strong> – Real‑time tracking with AI‑powered insights.</li>
-                        </ul>
-                        <a href="#membership" class="btn btn-secondary">Join Our Community</a>
-                    </div>
-                    <div class="about-image reveal from-right">
-                        <img src="images/hero/Gym-interior.jpg" alt="APEX GYM interior" loading="lazy">
-                    </div>
+                <a
+                  href="#"
+                  class="program-cta"
+                  aria-label="Explore Boxing & MMA program"
+                  >Explore →</a
+                >
+              </div>
+            </article>
+            <article class="program-card reveal">
+              <div class="program-image-container">
+                <img
+                  src="images/programs/program-6.jpg"
+                  alt="Body Transformation Program"
+                  class="program-image"
+                  loading="lazy"
+                />
+                <span class="program-badge">TRANSFORM</span>
+              </div>
+              <div class="program-content">
+                <h3 class="program-title">Body Transformation Program</h3>
+                <p class="program-description">
+                  Personalized plan for fat loss & muscle gain.
+                </p>
+                <div class="program-meta">
+                  <span>12 weeks</span>
+                  <span class="difficulty">Medium</span>
                 </div>
-            </div>
-        </section>
-
-        <!-- Membership -->
-        <section id="membership" class="membership" aria-labelledby="membership-title">
-            <div class="container">
-                <header>
-                    <h2 id="membership-title" class="section-title reveal">MEMBERSHIP PLANS</h2>
-                    <p class="section-subtitle reveal">No contracts. No joining fee. Cancel anytime.</p>
-                </header>
-                
-                <!-- Pricing Toggle -->
-                <div class="toggle-container" role="group" aria-label="Pricing period selection">
-                    <button class="toggle-label active" aria-pressed="true" data-period="monthly">
-                        Monthly
-                    </button>
-                    <label class="toggle-switch" for="annual-toggle">
-                        <input type="checkbox" id="annual-toggle" aria-label="Switch to annual pricing and save 20%">
-                        <span class="slider" aria-hidden="true"></span>
-                    </label>
-                    <button class="toggle-label" aria-pressed="false" data-period="annual">
-                        Annual <span class="save">Save 20%</span>
-                    </button>
+                <a
+                  href="#"
+                  class="program-cta"
+                  aria-label="Explore Body Transformation Program"
+                  >Explore →</a
+                >
+              </div>
+            </article>
+            <article class="program-card reveal">
+              <div class="program-image-container">
+                <img
+                  src="images/programs/program-7.jpg"
+                  alt="Personal Training (1‑on‑1)"
+                  class="program-image"
+                  loading="lazy"
+                />
+                <span class="program-badge">PERSONAL</span>
+              </div>
+              <div class="program-content">
+                <h3 class="program-title">Personal Training (1‑on‑1)</h3>
+                <p class="program-description">
+                  Tailored coaching for your specific goals.
+                </p>
+                <div class="program-meta">
+                  <span>Custom</span>
+                  <span class="difficulty">Any</span>
                 </div>
-
-                <!-- Pricing Cards -->
-                <div class="pricing-grid" role="list" aria-label="Available membership plans">
-                    
-                    <!-- Basic Plan -->
-                    <article class="pricing-card reveal" role="listitem" aria-labelledby="plan-basic-name">
-                        <h3 id="plan-basic-name" class="plan-name">Basic</h3>
-                        <div class="plan-price" role="group" aria-label="Pricing details">
-                            <div class="price-amount" aria-live="polite" aria-atomic="true">$29</div>
-                            <div class="price-period">per month</div>
-                            <div class="price-annual">$348 billed annually</div>
-                        </div>
-                        <ul class="plan-features" role="list" aria-label="Basic plan features">
-                            <li role="listitem">Access to gym floor</li>
-                            <li role="listitem">Locker room & showers</li>
-                            <li role="listitem">Free Wi‑Fi</li>
-                            <li role="listitem">Basic fitness assessment</li>
-                            <li role="listitem">1 group class per week</li>
-                        </ul>
-                        <a href="#membership" class="btn btn-secondary plan-cta" aria-label="Get started with Basic plan for $29 per month">
-                            Get Started
-                        </a>
-                    </article>
-
-                    <!-- Pro Plan (Recommended) -->
-                    <article class="pricing-card featured reveal" role="listitem" aria-labelledby="plan-pro-name">
-                        <div class="featured-badge" aria-label="Most popular plan">Most Popular</div>
-                        <h3 id="plan-pro-name" class="plan-name">Pro</h3>
-                        <div class="plan-price" role="group" aria-label="Pricing details">
-                            <div class="price-amount" aria-live="polite" aria-atomic="true">$59</div>
-                            <div class="price-period">per month</div>
-                            <div class="price-annual">$708 billed annually</div>
-                        </div>
-                        <ul class="plan-features" role="list" aria-label="Pro plan features">
-                            <li role="listitem">Everything in Basic</li>
-                            <li role="listitem">Unlimited group classes</li>
-                            <li role="listitem">2 personal training sessions</li>
-                            <li role="listitem">Access to premium zones</li>
-                            <li role="listitem">Nutrition consultation</li>
-                            <li role="listitem">Progress tracking app</li>
-                        </ul>
-                        <a href="#membership" class="btn btn-primary plan-cta" aria-label="Join Pro plan for $59 per month">
-                            Join Now
-                        </a>
-                    </article>
-
-                    <!-- Premium Plan -->
-                    <article class="pricing-card reveal" role="listitem" aria-labelledby="plan-premium-name">
-                        <h3 id="plan-premium-name" class="plan-name">Premium</h3>
-                        <div class="plan-price" role="group" aria-label="Pricing details">
-                            <div class="price-amount" aria-live="polite" aria-atomic="true">$99</div>
-                            <div class="price-period">per month</div>
-                            <div class="price-annual">$1,188 billed annually</div>
-                        </div>
-                        <ul class="plan-features" role="list" aria-label="Premium plan features">
-                            <li role="listitem">Everything in Pro</li>
-                            <li role="listitem">Unlimited personal training</li>
-                            <li role="listitem">24/7 VIP access</li>
-                            <li role="listitem">Guest passes (2 per month)</li>
-                            <li role="listitem">Advanced body composition scan</li>
-                            <li role="listitem">Priority booking for classes</li>
-                            <li role="listitem">Complimentary supplements</li>
-                        </ul>
-                        <a href="#membership" class="btn btn-secondary plan-cta" aria-label="Go Premium plan for $99 per month">
-                            Go Premium
-                        </a>
-                    </article>
+                <a
+                  href="#"
+                  class="program-cta"
+                  aria-label="Explore Personal Training (1‑on‑1) program"
+                  >Explore →</a
+                >
+              </div>
+            </article>
+            <article class="program-card reveal">
+              <div class="program-image-container">
+                <img
+                  src="images/programs/program-8.jpg"
+                  alt="Group Classes"
+                  class="program-image"
+                  loading="lazy"
+                />
+                <span class="program-badge">GROUP</span>
+              </div>
+              <div class="program-content">
+                <h3 class="program-title">Group Classes</h3>
+                <p class="program-description">
+                  Motivating group sessions with expert trainers.
+                </p>
+                <div class="program-meta">
+                  <span>50 min</span>
+                  <span class="difficulty">Varied</span>
                 </div>
-            </div>
-        </section>
+                <a
+                  href="#"
+                  class="program-cta"
+                  aria-label="Explore Group Classes program"
+                  >Explore →</a
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
 
-        <!-- Trainers -->
-        <section id="trainers" class="trainers">
-            <div class="container">
-                <h2 class="section-title reveal">MEET OUR TRAINERS</h2>
-                <p class="section-subtitle reveal">Certified experts with 10+ years experience.</p>
-                <div class="trainers-grid">
-                    <div class="trainer-card reveal">
-                        <img src="images/trainers/trainer-1.jpg" alt="Marcus Stone" class="trainer-image" loading="lazy">
-                        <div class="trainer-overlay trainer-info">
-                            <h3 class="trainer-name">Marcus Stone</h3>
-                            <p class="trainer-specialty specialty">Strength & Conditioning</p>
-                            <p class="trainer-experience">12 years experience</p>
-                            <p class="trainer-bio bio">Former competitive powerlifter, specializes in strength programming.</p>
-                            <div class="trainer-social">
-                                <a href="#" aria-label="Instagram">IG</a>
-                                <a href="#" aria-label="Book session">Book</a>
-                            </div>
-                        </div>
-                        <div class="trainer-content trainer-info">
-                            <h3 class="trainer-name">Marcus Stone</h3>
-                            <p class="trainer-specialty specialty">Strength & Conditioning</p>
-                        </div>
-                    </div>
-                    <div class="trainer-card reveal">
-                        <img src="images/trainers/trainer-2.jpg" alt="Chloe Zhang" class="trainer-image" loading="lazy">
-                        <div class="trainer-overlay trainer-info">
-                            <h3 class="trainer-name">Chloe Zhang</h3>
-                            <p class="trainer-specialty specialty">HIIT & Metabolic Training</p>
-                            <p class="trainer-experience">8 years experience</p>
-                            <p class="trainer-bio bio">Certified HIIT coach with a background in sports science.</p>
-                            <div class="trainer-social">
-                                <a href="#" aria-label="Instagram">IG</a>
-                                <a href="#" aria-label="Book session">Book</a>
-                            </div>
-                        </div>
-                        <div class="trainer-content trainer-info">
-                            <h3 class="trainer-name">Chloe Zhang</h3>
-                            <p class="trainer-specialty specialty">HIIT & Metabolic Training</p>
-                        </div>
-                    </div>
-                    <div class="trainer-card reveal">
-                        <img src="images/trainers/trainer-3.jpg" alt="David Rivera" class="trainer-image" loading="lazy">
-                        <div class="trainer-overlay trainer-info">
-                            <h3 class="trainer-name">David Rivera</h3>
-                            <p class="trainer-specialty specialty">Yoga & Mobility</p>
-                            <p class="trainer-experience">10 years experience</p>
-                            <p class="trainer-bio bio">Yoga therapist focused on injury prevention and recovery.</p>
-                            <div class="trainer-social">
-                                <a href="#" aria-label="Instagram">IG</a>
-                                <a href="#" aria-label="Book session">Book</a>
-                            </div>
-                        </div>
-                        <div class="trainer-content trainer-info">
-                            <h3 class="trainer-name">David Rivera</h3>
-                            <p class="trainer-specialty specialty">Yoga & Mobility</p>
-                        </div>
-                    </div>
-                    <div class="trainer-card reveal">
-                        <img src="images/trainers/trainer-4.jpg" alt="Sophia Chen" class="trainer-image" loading="lazy">
-                        <div class="trainer-overlay trainer-info">
-                            <h3 class="trainer-name">Sophia Chen</h3>
-                            <p class="trainer-specialty specialty">Nutrition & Dietetics</p>
-                            <p class="trainer-experience">9 years experience</p>
-                            <p class="trainer-bio bio">Registered dietitian creating personalized meal plans.</p>
-                            <div class="trainer-social">
-                                <a href="#" aria-label="Instagram">IG</a>
-                                <a href="#" aria-label="Book session">Book</a>
-                            </div>
-                        </div>
-                        <div class="trainer-content trainer-info">
-                            <h3 class="trainer-name">Sophia Chen</h3>
-                            <p class="trainer-specialty specialty">Nutrition & Dietetics</p>
-                        </div>
-                    </div>
+      <!-- Why Choose Us -->
+      <section class="why">
+        <div class="why-background">
+          <div class="why-overlay"></div>
+          <div class="why-image reveal from-right">
+            <img
+              src="images/hero/Gym-interior.jpg"
+              alt="Gym interior"
+              loading="lazy"
+            />
+          </div>
+        </div>
+        <div class="container">
+          <div class="why-content">
+            <h2 class="section-title reveal">WHY CHOOSE APEX GYM</h2>
+            <div class="usp-cards-grid">
+              <div class="usp-card reveal">
+                <div class="usp-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z"
+                    />
+                  </svg>
                 </div>
-            </div>
-        </section>
-
-        <!-- Transformation -->
-        <section class="transformation">
-            <div class="container">
-                <h2 class="section-title reveal">REAL TRANSFORMATIONS</h2>
-                <p class="section-subtitle reveal">See what our members have achieved.</p>
-                <div class="transformation-grid">
-                    <!-- Transformation Card 1 -->
-                    <article class="transformation-card reveal">
-                        <div class="before-after-container" role="region" aria-label="Before and after comparison slider" aria-describedby="transformation-desc-1">
-                            <img src="images/transformations/before.jpg.svg" alt="Before transformation: Member at start of fitness journey" class="before-image">
-                            <img src="images/transformations/after.jpg.svg" alt="After transformation: Member after 12 weeks of training" class="after-image">
-                            <div class="slider-handle" tabindex="0" role="slider" aria-label="Comparison slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-valuetext="50 percent"></div>
-                            <div class="slider-labels">
-                                <span class="label-before" aria-hidden="true">Before</span>
-                                <span class="label-after" aria-hidden="true">After</span>
-                            </div>
-                        </div>
-                        <div class="transformation-info">
-                            <div class="transformation-header">
-                                <h3 class="transformation-name">Alex Morgan</h3>
-                                <span class="transformation-timeframe">12 Weeks</span>
-                            </div>
-                            <div class="result-badge">-28 lbs · +15 lbs Muscle</div>
-                            <p class="transformation-quote" id="transformation-desc-1">"APEX GYM changed my life. The personalized training and nutrition plan helped me achieve results I never thought possible."</p>
-                        </div>
-                    </article>
-
-                    <!-- Transformation Card 2 -->
-                    <article class="transformation-card reveal">
-                        <div class="before-after-container" role="region" aria-label="Before and after comparison slider" aria-describedby="transformation-desc-2">
-                            <img src="images/transformations/before.jpg.svg" alt="Before transformation: Member starting strength training" class="before-image">
-                            <img src="images/transformations/after.jpg.svg" alt="After transformation: Member after 16 weeks of powerlifting" class="after-image">
-                            <div class="slider-handle" tabindex="0" role="slider" aria-label="Comparison slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-valuetext="50 percent"></div>
-                            <div class="slider-labels">
-                                <span class="label-before" aria-hidden="true">Before</span>
-                                <span class="label-after" aria-hidden="true">After</span>
-                            </div>
-                        </div>
-                        <div class="transformation-info">
-                            <div class="transformation-header">
-                                <h3 class="transformation-name">Jamie Chen</h3>
-                                <span class="transformation-timeframe">16 Weeks</span>
-                            </div>
-                            <div class="result-badge">+45 lbs Bench Press · +80 lbs Deadlift</div>
-                            <p class="transformation-quote" id="transformation-desc-2">"The strength program at APEX took my lifts to a whole new level. Expert coaching made all the difference in my technique."</p>
-                        </div>
-                    </article>
-
-                    <!-- Transformation Card 3 -->
-                    <article class="transformation-card reveal">
-                        <div class="before-after-container" role="region" aria-label="Before and after comparison slider" aria-describedby="transformation-desc-3">
-                            <img src="images/transformations/before.jpg.svg" alt="Before transformation: Member before mobility training" class="before-image">
-                            <img src="images/transformations/after.jpg.svg" alt="After transformation: Member after 8 weeks of yoga and flexibility work" class="after-image">
-                            <div class="slider-handle" tabindex="0" role="slider" aria-label="Comparison slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-valuetext="50 percent"></div>
-                            <div class="slider-labels">
-                                <span class="label-before" aria-hidden="true">Before</span>
-                                <span class="label-after" aria-hidden="true">After</span>
-                            </div>
-                        </div>
-                        <div class="transformation-info">
-                            <div class="transformation-header">
-                                <h3 class="transformation-name">Taylor Rodriguez</h3>
-                                <span class="transformation-timeframe">8 Weeks</span>
-                            </div>
-                            <div class="result-badge">+6" Flexibility · No Back Pain</div>
-                            <p class="transformation-quote" id="transformation-desc-3">"After years of desk job back pain, the yoga and mobility classes gave me my life back. I move better than I did in my 20s!"</p>
-                        </div>
-                    </article>
+                <h3>Cutting‑Edge Equipment</h3>
+                <p>
+                  Train with the latest Technogym, Rogue, and Hammer Strength
+                  machines.
+                </p>
+              </div>
+              <div class="usp-card reveal">
+                <div class="usp-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM9 7.5A.75.75 0 019 9h.253a2.25 2.25 0 011.837.944.75.75 0 01-1.212.883 1.25 1.25 0 00-1.02-.527H9.75v1.5H9a.75.75 0 010-1.5h.253a3.75 3.75 0 013.06 1.527.75.75 0 01-1.212.883A2.25 2.25 0 009.253 12H9a.75.75 0 010-1.5h.75V9H9zm6 0a.75.75 0 01.75.75v4.5a.75.75 0 01-1.5 0v-4.5A.75.75 0 0115 7.5z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
                 </div>
+                <h3>Elite Certified Trainers</h3>
+                <p>1‑on‑1 coaching from industry‑leading professionals.</p>
+              </div>
+              <div class="usp-card reveal">
+                <div class="usp-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M12 1.5a5.25 5.25 0 00-5.25 5.25v3a3 3 0 00-3 3v6.75a3 3 0 003 3h10.5a3 3 0 003-3v-6.75a3 3 0 00-3-3v-3c0-2.9-2.35-5.25-5.25-5.25zm3.75 8.25v-3a3.75 3.75 0 10-7.5 0v3h7.5z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <h3>24/7 Access & Security</h3>
+                <p>
+                  Your gym, your schedule. Biometric entry & CCTV monitoring.
+                </p>
+              </div>
+              <div class="usp-card reveal">
+                <div class="usp-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M18.375 2.25c-1.035 0-1.875.84-1.875 1.875v15.75c0 1.035.84 1.875 1.875 1.875h.75c1.035 0 1.875-.84 1.875-1.875V4.125c0-1.036-.84-1.875-1.875-1.875h-.75zM9.75 8.625c0-1.036.84-1.875 1.875-1.875h.75c1.036 0 1.875.84 1.875 1.875v11.25c0 1.035-.84 1.875-1.875 1.875h-.75a1.875 1.875 0 01-1.875-1.875V8.625zM3 13.125c0-1.036.84-1.875 1.875-1.875h.75c1.036 0 1.875.84 1.875 1.875v6.75c0 1.035-.84 1.875-1.875 1.875h-.75A1.875 1.875 0 013 19.875v-6.75z"
+                    />
+                  </svg>
+                </div>
+                <h3>Personalized Progress Tracking</h3>
+                <p>
+                  AI‑powered analytics to measure every rep, set, and milestone.
+                </p>
+              </div>
+              <div class="usp-card reveal">
+                <div class="usp-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M8.25 6.75a3.75 3.75 0 117.5 0 3.75 3.75 0 01-7.5 0zM15.75 9.75a3 3 0 116 0 3 3 0 01-6 0zM2.25 9.75a3 3 0 116 0 3 3 0 01-6 0zM6.31 15.117A6.745 6.745 0 0112 12a6.745 6.745 0 016.709 7.498.75.75 0 01-.372.568A12.696 12.696 0 0112 21.75c-2.305 0-4.47-.612-6.337-1.684a.75.75 0 01-.372-.568 6.787 6.787 0 011.019-4.38z"
+                      clip-rule="evenodd"
+                    />
+                    <path
+                      d="M5.082 14.254a8.287 8.287 0 00-1.308 5.135 9.687 9.687 0 01-1.764-.44l-.115-.04a.563.563 0 01-.373-.487l-.01-.121a3.75 3.75 0 013.57-4.047zM20.226 19.389a8.287 8.287 0 00-1.308-5.135 3.75 3.75 0 013.57 4.047l-.01.121a.563.563 0 01-.373.486l-.115.04c-.567.2-1.156.349-1.764.441z"
+                    />
+                  </svg>
+                </div>
+                <h3>Inclusive Community Vibe</h3>
+                <p>Join a supportive network of 2,400+ motivated members.</p>
+              </div>
+              <div class="usp-card reveal">
+                <div class="usp-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm3 10.5a.75.75 0 000-1.5H9a.75.75 0 000 1.5h6z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+                <h3>No‑Contract Flexibility</h3>
+                <p>Month‑to‑month membership, cancel anytime.</p>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <!-- Schedule -->
-        <section class="schedule">
-            <div class="container">
-                <h2 class="section-title reveal">CLASS SCHEDULE</h2>
-                <div class="schedule-filters">
-                    <button class="filter active" data-filter="all">All</button>
-                    <button class="filter" data-filter="strength">Strength</button>
-                    <button class="filter" data-filter="cardio">Cardio</button>
-                    <button class="filter" data-filter="yoga">Yoga</button>
-                    <button class="filter" data-filter="boxing">Boxing</button>
-                    <button class="filter" data-filter="recovery">Recovery</button>
-                </div>
-                <div class="schedule-table">
-                    <!-- Schedule grid will be inserted -->
-                </div>
+      <!-- About Us -->
+      <section id="about" class="about">
+        <div class="container">
+          <h2 class="section-title reveal">OUR STORY</h2>
+          <p class="section-subtitle reveal">
+            Where strength meets science since 2019.
+          </p>
+          <div class="about-content">
+            <div class="about-text reveal from-left">
+              <p>
+                APEX GYM was founded on a simple belief: fitness should be
+                intelligent, personalized, and accessible. We combine
+                cutting‑edge equipment with evidence‑based training
+                methodologies to deliver results that last.
+              </p>
+              <p>
+                Our team of elite trainers, nutritionists, and sports scientists
+                work together to create a holistic environment where every
+                member can push their limits and build a legacy of health.
+              </p>
+              <ul class="about-features">
+                <li>
+                  <strong>Evidence‑Based Programming</strong> – Every workout is
+                  backed by sports science.
+                </li>
+                <li>
+                  <strong>Community‑Driven</strong> – A supportive network of
+                  2,400+ motivated members.
+                </li>
+                <li>
+                  <strong>Continuous Innovation</strong> – Regularly updated
+                  equipment and class formats.
+                </li>
+                <li>
+                  <strong>Transparent Progress</strong> – Real‑time tracking
+                  with AI‑powered insights.
+                </li>
+              </ul>
+              <a href="#membership" class="btn btn-secondary"
+                >Join Our Community</a
+              >
             </div>
-        </section>
+            <div class="about-image reveal from-right">
+              <img
+                src="images/hero/Gym-interior.jpg"
+                alt="APEX GYM interior"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <!-- Testimonials -->
-        <section class="testimonials">
-            <div class="container">
-                <h2 class="section-title reveal">WHAT MEMBERS SAY</h2>
-                <div class="carousel">
-                    <div class="carousel-track">
-                        <!-- Testimonial cards will be inserted -->
-                    </div>
-                    <div class="carousel-nav">
-                        <button class="prev" aria-label="Previous">‹</button>
-                        <div class="dots"></div>
-                        <button class="next" aria-label="Next">›</button>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <!-- Membership -->
+      <section
+        id="membership"
+        class="membership"
+        aria-labelledby="membership-title"
+      >
+        <div class="container">
+          <header>
+            <h2 id="membership-title" class="section-title reveal">
+              MEMBERSHIP PLANS
+            </h2>
+            <p class="section-subtitle reveal">
+              No contracts. No joining fee. Cancel anytime.
+            </p>
+          </header>
 
-        <!-- Gallery -->
-        <section class="gallery">
-            <div class="container">
-                <h2 class="section-title reveal">OUR FACILITIES</h2>
-                <div class="masonry">
-                    <!-- Gallery images will be inserted -->
-                </div>
-            </div>
-            <div class="lightbox">
-                <button class="close-lightbox">×</button>
-                <img src="" alt="">
-                <button class="prev-lightbox">‹</button>
-                <button class="next-lightbox">›</button>
-            </div>
-        </section>
+          <!-- Pricing Toggle -->
+          <div
+            class="toggle-container"
+            role="group"
+            aria-label="Pricing period selection"
+          >
+            <button
+              class="toggle-label active"
+              aria-pressed="true"
+              data-period="monthly"
+            >
+              Monthly
+            </button>
+            <label class="toggle-switch" for="annual-toggle">
+              <input
+                type="checkbox"
+                id="annual-toggle"
+                aria-label="Switch to annual pricing and save 20%"
+              />
+              <span class="slider" aria-hidden="true"></span>
+            </label>
+            <button
+              class="toggle-label"
+              aria-pressed="false"
+              data-period="annual"
+            >
+              Annual <span class="save">Save 20%</span>
+            </button>
+          </div>
 
-        <!-- FAQ -->
-        <section class="faq">
-            <div class="container">
-                <h2 class="section-title reveal">FREQUENTLY ASKED QUESTIONS</h2>
-                <div class="accordion">
-                    <!-- FAQ items will be inserted -->
+          <!-- Pricing Cards -->
+          <div
+            class="pricing-grid"
+            role="list"
+            aria-label="Available membership plans"
+          >
+            <!-- Basic Plan -->
+            <article
+              class="pricing-card reveal"
+              role="listitem"
+              aria-labelledby="plan-basic-name"
+            >
+              <h3 id="plan-basic-name" class="plan-name">Basic</h3>
+              <div class="plan-price" role="group" aria-label="Pricing details">
+                <div class="price-amount" aria-live="polite" aria-atomic="true">
+                  $29
                 </div>
-            </div>
-        </section>
+                <div class="price-period">per month</div>
+                <div class="price-annual">$348 billed annually</div>
+              </div>
+              <ul
+                class="plan-features"
+                role="list"
+                aria-label="Basic plan features"
+              >
+                <li role="listitem">Access to gym floor</li>
+                <li role="listitem">Locker room & showers</li>
+                <li role="listitem">Free Wi‑Fi</li>
+                <li role="listitem">Basic fitness assessment</li>
+                <li role="listitem">1 group class per week</li>
+              </ul>
+              <a
+                href="#membership"
+                class="btn btn-secondary plan-cta"
+                aria-label="Get started with Basic plan for $29 per month"
+              >
+                Get Started
+              </a>
+            </article>
 
-        <!-- Final CTA -->
-        <section class="final-cta">
-            <div class="container">
-                <div class="final-cta-content reveal">
-                    <span class="overline">YOUR JOURNEY STARTS HERE</span>
-                    <h2>READY TO CHANGE YOUR LIFE?</h2>
-                    <p>Join 2,400+ members. First 7 days completely free.</p>
-                    <div class="cta-buttons">
-                        <a href="#membership" class="btn btn-primary btn-large">Start Free Trial</a>
-                        <a href="#" class="btn btn-outline">Book a Gym Tour</a>
-                    </div>
-                    <div class="trust-badges">
-                        <span>No contracts</span>
-                        <span>Free trial</span>
-                        <span>Cancel anytime</span>
-                        <span>24/7 Access</span>
-                    </div>
+            <!-- Pro Plan (Recommended) -->
+            <article
+              class="pricing-card featured reveal"
+              role="listitem"
+              aria-labelledby="plan-pro-name"
+            >
+              <div class="featured-badge" aria-label="Most popular plan">
+                Most Popular
+              </div>
+              <h3 id="plan-pro-name" class="plan-name">Pro</h3>
+              <div class="plan-price" role="group" aria-label="Pricing details">
+                <div class="price-amount" aria-live="polite" aria-atomic="true">
+                  $59
                 </div>
+                <div class="price-period">per month</div>
+                <div class="price-annual">$708 billed annually</div>
+              </div>
+              <ul
+                class="plan-features"
+                role="list"
+                aria-label="Pro plan features"
+              >
+                <li role="listitem">Everything in Basic</li>
+                <li role="listitem">Unlimited group classes</li>
+                <li role="listitem">2 personal training sessions</li>
+                <li role="listitem">Access to premium zones</li>
+                <li role="listitem">Nutrition consultation</li>
+                <li role="listitem">Progress tracking app</li>
+              </ul>
+              <a
+                href="#membership"
+                class="btn btn-primary plan-cta"
+                aria-label="Join Pro plan for $59 per month"
+              >
+                Join Now
+              </a>
+            </article>
+
+            <!-- Premium Plan -->
+            <article
+              class="pricing-card reveal"
+              role="listitem"
+              aria-labelledby="plan-premium-name"
+            >
+              <h3 id="plan-premium-name" class="plan-name">Premium</h3>
+              <div class="plan-price" role="group" aria-label="Pricing details">
+                <div class="price-amount" aria-live="polite" aria-atomic="true">
+                  $99
+                </div>
+                <div class="price-period">per month</div>
+                <div class="price-annual">$1,188 billed annually</div>
+              </div>
+              <ul
+                class="plan-features"
+                role="list"
+                aria-label="Premium plan features"
+              >
+                <li role="listitem">Everything in Pro</li>
+                <li role="listitem">Unlimited personal training</li>
+                <li role="listitem">24/7 VIP access</li>
+                <li role="listitem">Guest passes (2 per month)</li>
+                <li role="listitem">Advanced body composition scan</li>
+                <li role="listitem">Priority booking for classes</li>
+                <li role="listitem">Complimentary supplements</li>
+              </ul>
+              <a
+                href="#membership"
+                class="btn btn-secondary plan-cta"
+                aria-label="Go Premium plan for $99 per month"
+              >
+                Go Premium
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Trainers -->
+      <section id="trainers" class="trainers">
+        <div class="container">
+          <h2 class="section-title reveal">MEET OUR TRAINERS</h2>
+          <p class="section-subtitle reveal">
+            Certified experts with 10+ years experience.
+          </p>
+          <div class="trainers-grid">
+            <div class="trainer-card reveal">
+              <img
+                src="images/trainers/trainer-1.jpg"
+                alt="Marcus Stone"
+                class="trainer-image"
+                loading="lazy"
+              />
+              <div class="trainer-overlay trainer-info">
+                <h3 class="trainer-name">Marcus Stone</h3>
+                <p class="trainer-specialty specialty">
+                  Strength & Conditioning
+                </p>
+                <p class="trainer-experience">12 years experience</p>
+                <p class="trainer-bio bio">
+                  Former competitive powerlifter, specializes in strength
+                  programming.
+                </p>
+                <div class="trainer-social">
+                  <a href="#" aria-label="Instagram">IG</a>
+                  <a href="#" aria-label="Book session">Book</a>
+                </div>
+              </div>
+              <div class="trainer-content trainer-info">
+                <h3 class="trainer-name">Marcus Stone</h3>
+                <p class="trainer-specialty specialty">
+                  Strength & Conditioning
+                </p>
+              </div>
             </div>
-        </section>
+            <div class="trainer-card reveal">
+              <img
+                src="images/trainers/trainer-2.jpg"
+                alt="Chloe Zhang"
+                class="trainer-image"
+                loading="lazy"
+              />
+              <div class="trainer-overlay trainer-info">
+                <h3 class="trainer-name">Chloe Zhang</h3>
+                <p class="trainer-specialty specialty">
+                  HIIT & Metabolic Training
+                </p>
+                <p class="trainer-experience">8 years experience</p>
+                <p class="trainer-bio bio">
+                  Certified HIIT coach with a background in sports science.
+                </p>
+                <div class="trainer-social">
+                  <a href="#" aria-label="Instagram">IG</a>
+                  <a href="#" aria-label="Book session">Book</a>
+                </div>
+              </div>
+              <div class="trainer-content trainer-info">
+                <h3 class="trainer-name">Chloe Zhang</h3>
+                <p class="trainer-specialty specialty">
+                  HIIT & Metabolic Training
+                </p>
+              </div>
+            </div>
+            <div class="trainer-card reveal">
+              <img
+                src="images/trainers/trainer-3.jpg"
+                alt="David Rivera"
+                class="trainer-image"
+                loading="lazy"
+              />
+              <div class="trainer-overlay trainer-info">
+                <h3 class="trainer-name">David Rivera</h3>
+                <p class="trainer-specialty specialty">Yoga & Mobility</p>
+                <p class="trainer-experience">10 years experience</p>
+                <p class="trainer-bio bio">
+                  Yoga therapist focused on injury prevention and recovery.
+                </p>
+                <div class="trainer-social">
+                  <a href="#" aria-label="Instagram">IG</a>
+                  <a href="#" aria-label="Book session">Book</a>
+                </div>
+              </div>
+              <div class="trainer-content trainer-info">
+                <h3 class="trainer-name">David Rivera</h3>
+                <p class="trainer-specialty specialty">Yoga & Mobility</p>
+              </div>
+            </div>
+            <div class="trainer-card reveal">
+              <img
+                src="images/trainers/trainer-4.jpg"
+                alt="Sophia Chen"
+                class="trainer-image"
+                loading="lazy"
+              />
+              <div class="trainer-overlay trainer-info">
+                <h3 class="trainer-name">Sophia Chen</h3>
+                <p class="trainer-specialty specialty">Nutrition & Dietetics</p>
+                <p class="trainer-experience">9 years experience</p>
+                <p class="trainer-bio bio">
+                  Registered dietitian creating personalized meal plans.
+                </p>
+                <div class="trainer-social">
+                  <a href="#" aria-label="Instagram">IG</a>
+                  <a href="#" aria-label="Book session">Book</a>
+                </div>
+              </div>
+              <div class="trainer-content trainer-info">
+                <h3 class="trainer-name">Sophia Chen</h3>
+                <p class="trainer-specialty specialty">Nutrition & Dietetics</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Transformation -->
+      <section class="transformation">
+        <div class="container">
+          <h2 class="section-title reveal">REAL TRANSFORMATIONS</h2>
+          <p class="section-subtitle reveal">
+            See what our members have achieved.
+          </p>
+          <div class="transformation-grid">
+            <!-- Transformation Card 1 -->
+            <article class="transformation-card reveal">
+              <div
+                class="before-after-container"
+                role="region"
+                aria-label="Before and after comparison slider"
+                aria-describedby="transformation-desc-1"
+              >
+                <img
+                  src="images/transformations/before.jpg.svg"
+                  alt="Before transformation: Member at start of fitness journey"
+                  class="before-image"
+                />
+                <img
+                  src="images/transformations/after.jpg.svg"
+                  alt="After transformation: Member after 12 weeks of training"
+                  class="after-image"
+                />
+                <div
+                  class="slider-handle"
+                  tabindex="0"
+                  role="slider"
+                  aria-label="Comparison slider"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  aria-valuenow="50"
+                  aria-valuetext="50 percent"
+                ></div>
+                <div class="slider-labels">
+                  <span class="label-before" aria-hidden="true">Before</span>
+                  <span class="label-after" aria-hidden="true">After</span>
+                </div>
+              </div>
+              <div class="transformation-info">
+                <div class="transformation-header">
+                  <h3 class="transformation-name">Alex Morgan</h3>
+                  <span class="transformation-timeframe">12 Weeks</span>
+                </div>
+                <div class="result-badge">-28 lbs · +15 lbs Muscle</div>
+                <p class="transformation-quote" id="transformation-desc-1">
+                  "APEX GYM changed my life. The personalized training and
+                  nutrition plan helped me achieve results I never thought
+                  possible."
+                </p>
+              </div>
+            </article>
+
+            <!-- Transformation Card 2 -->
+            <article class="transformation-card reveal">
+              <div
+                class="before-after-container"
+                role="region"
+                aria-label="Before and after comparison slider"
+                aria-describedby="transformation-desc-2"
+              >
+                <img
+                  src="images/transformations/before.jpg.svg"
+                  alt="Before transformation: Member starting strength training"
+                  class="before-image"
+                />
+                <img
+                  src="images/transformations/after.jpg.svg"
+                  alt="After transformation: Member after 16 weeks of powerlifting"
+                  class="after-image"
+                />
+                <div
+                  class="slider-handle"
+                  tabindex="0"
+                  role="slider"
+                  aria-label="Comparison slider"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  aria-valuenow="50"
+                  aria-valuetext="50 percent"
+                ></div>
+                <div class="slider-labels">
+                  <span class="label-before" aria-hidden="true">Before</span>
+                  <span class="label-after" aria-hidden="true">After</span>
+                </div>
+              </div>
+              <div class="transformation-info">
+                <div class="transformation-header">
+                  <h3 class="transformation-name">Jamie Chen</h3>
+                  <span class="transformation-timeframe">16 Weeks</span>
+                </div>
+                <div class="result-badge">
+                  +45 lbs Bench Press · +80 lbs Deadlift
+                </div>
+                <p class="transformation-quote" id="transformation-desc-2">
+                  "The strength program at APEX took my lifts to a whole new
+                  level. Expert coaching made all the difference in my
+                  technique."
+                </p>
+              </div>
+            </article>
+
+            <!-- Transformation Card 3 -->
+            <article class="transformation-card reveal">
+              <div
+                class="before-after-container"
+                role="region"
+                aria-label="Before and after comparison slider"
+                aria-describedby="transformation-desc-3"
+              >
+                <img
+                  src="images/transformations/before.jpg.svg"
+                  alt="Before transformation: Member before mobility training"
+                  class="before-image"
+                />
+                <img
+                  src="images/transformations/after.jpg.svg"
+                  alt="After transformation: Member after 8 weeks of yoga and flexibility work"
+                  class="after-image"
+                />
+                <div
+                  class="slider-handle"
+                  tabindex="0"
+                  role="slider"
+                  aria-label="Comparison slider"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  aria-valuenow="50"
+                  aria-valuetext="50 percent"
+                ></div>
+                <div class="slider-labels">
+                  <span class="label-before" aria-hidden="true">Before</span>
+                  <span class="label-after" aria-hidden="true">After</span>
+                </div>
+              </div>
+              <div class="transformation-info">
+                <div class="transformation-header">
+                  <h3 class="transformation-name">Taylor Rodriguez</h3>
+                  <span class="transformation-timeframe">8 Weeks</span>
+                </div>
+                <div class="result-badge">+6" Flexibility · No Back Pain</div>
+                <p class="transformation-quote" id="transformation-desc-3">
+                  "After years of desk job back pain, the yoga and mobility
+                  classes gave me my life back. I move better than I did in my
+                  20s!"
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Schedule -->
+      <section class="schedule">
+        <div class="container">
+          <h2 class="section-title reveal">CLASS SCHEDULE</h2>
+          <div class="schedule-filters">
+            <button class="filter active" data-filter="all">All</button>
+            <button class="filter" data-filter="strength">Strength</button>
+            <button class="filter" data-filter="cardio">Cardio</button>
+            <button class="filter" data-filter="yoga">Yoga</button>
+            <button class="filter" data-filter="boxing">Boxing</button>
+            <button class="filter" data-filter="recovery">Recovery</button>
+          </div>
+          <div class="schedule-table">
+            <!-- Schedule grid will be inserted -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section class="testimonials">
+        <div class="container">
+          <h2 class="section-title reveal">WHAT MEMBERS SAY</h2>
+          <div class="carousel">
+            <div class="carousel-track">
+              <!-- Testimonial cards will be inserted -->
+            </div>
+            <div class="carousel-nav">
+              <button class="prev" aria-label="Previous">‹</button>
+              <div class="dots"></div>
+              <button class="next" aria-label="Next">›</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery -->
+      <section class="gallery">
+        <div class="container">
+          <h2 class="section-title reveal">OUR FACILITIES</h2>
+          <div class="masonry">
+            <!-- Gallery images will be inserted -->
+          </div>
+        </div>
+        <div class="lightbox">
+          <button class="close-lightbox">×</button>
+          <img src="" alt="" />
+          <button class="prev-lightbox">‹</button>
+          <button class="next-lightbox">›</button>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="faq">
+        <div class="container">
+          <h2 class="section-title reveal">FREQUENTLY ASKED QUESTIONS</h2>
+          <div class="accordion">
+            <!-- FAQ items will be inserted -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Final CTA -->
+      <section class="final-cta">
+        <div class="container">
+          <div class="final-cta-content reveal">
+            <span class="overline">YOUR JOURNEY STARTS HERE</span>
+            <h2>READY TO CHANGE YOUR LIFE?</h2>
+            <p>Join 2,400+ members. First 7 days completely free.</p>
+            <div class="cta-buttons">
+              <a href="#membership" class="btn btn-primary btn-large"
+                >Start Free Trial</a
+              >
+              <a href="#" class="btn btn-outline">Book a Gym Tour</a>
+            </div>
+            <div class="trust-badges">
+              <span>No contracts</span>
+              <span>Free trial</span>
+              <span>Cancel anytime</span>
+              <span>24/7 Access</span>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <a href="index.html" class="logo">APEX <span>GYM</span></a>
-                    <p class="tagline">Where strength meets science.</p>
-                    <div class="social">
-                        <a href="#" class="social-icon" aria-label="Instagram">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                            </svg>
-                        </a>
-                        <a href="#" class="social-icon" aria-label="YouTube">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
-                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
-                            </svg>
-                        </a>
-                        <a href="#" class="social-icon" aria-label="Facebook">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-                            </svg>
-                        </a>
-                        <a href="#" class="social-icon" aria-label="TikTok">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#programs">Programs</a></li>
-                        <li><a href="#trainers">Trainers</a></li>
-                        <li><a href="#membership">Membership</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Programs</h3>
-                    <ul>
-                        <li><a href="#programs">Strength & Powerlifting</a></li>
-                        <li><a href="#programs">HIIT & Cardio Blast</a></li>
-                        <li><a href="#programs">Yoga & Mobility</a></li>
-                        <li><a href="#programs">Boxing & MMA</a></li>
-                        <li><a href="#programs">Personal Training</a></li>
-                        <li><a href="#programs">Group Classes</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Contact</h3>
-                    <address>
-                        123 Fitness Street,<br>
-                        New York, NY 10001<br>
-                        United States
-                    </address>
-                    <p><a href="tel:+11234567890">+1 (123) 456-7890</a></p>
-                    <p><a href="mailto:info@apexgym.com">info@apexgym.com</a></p>
-                    <a href="#" class="map-link">View on Google Maps →</a>
-                </div>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <a href="index.html" class="logo">APEX <span>GYM</span></a>
+            <p class="tagline">Where strength meets science.</p>
+            <a href="tel:+9779860213414">Call +977 9860213414</a>
+            <p>Email: singhchy@gmail.com</p>
+            <div class="social">
+              <a href="#" class="social-icon" aria-label="Instagram">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path
+                    d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                  ></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
+              <a href="#" class="social-icon" aria-label="YouTube">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"
+                  ></path>
+                  <polygon
+                    points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"
+                  ></polygon>
+                </svg>
+              </a>
+              <a href="#" class="social-icon" aria-label="Facebook">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                  ></path>
+                </svg>
+              </a>
+              <a href="#" class="social-icon" aria-label="TikTok">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+                </svg>
+              </a>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 APEX GYM. All rights reserved.</p>
-                <div>
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                </div>
-            </div>
+          </div>
+          <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#programs">Programs</a></li>
+              <li><a href="#trainers">Trainers</a></li>
+              <li><a href="#membership">Membership</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Programs</h3>
+            <ul>
+              <li><a href="#programs">Strength & Powerlifting</a></li>
+              <li><a href="#programs">HIIT & Cardio Blast</a></li>
+              <li><a href="#programs">Yoga & Mobility</a></li>
+              <li><a href="#programs">Boxing & MMA</a></li>
+              <li><a href="#programs">Personal Training</a></li>
+              <li><a href="#programs">Group Classes</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Contact</h3>
+            <address>
+              123 Fitness Street,<br />
+              New York, NY 10001<br />
+              United States
+            </address>
+            <p><a href="tel:+9779860213414">Call +977 9860213414</a></p>
+            <p>Email: singhchy@gmail.com</p>
+            <a href="#" class="map-link">View on Google Maps →</a>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 APEX GYM. All rights reserved.</p>
+          <div>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <!-- JavaScript -->
@@ -769,5 +1199,5 @@
     <script src="js/toggle.js" defer></script>
     <script src="js/tabs.js" defer></script>
     <script src="js/beforeafter.js" defer></script>
-</body>
+  </body>
 </html>
